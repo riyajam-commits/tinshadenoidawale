@@ -1,103 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tin Shade Noida Wale</title>
+
+<title>Tin Shade Noida</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
-body{background:#ffffff;color:#222;line-height:1.6;}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#ffffff; /* White background */
+color:#1f2937;
+line-height:1.6;
+}
 
 /* HEADER */
+
 header{
 background:#c8102e; /* Red */
 color:white;
-padding:45px 20px;
 text-align:center;
+padding:50px 20px;
 }
-header img{width:150px;margin-bottom:10px;}
-header h1{font-size:38px;}
 
-/* NAVBAR */
+header img{
+width:170px;
+margin-bottom:15px;
+}
+
+/* NAV */
+
 nav{
 background:#c8102e; /* Red */
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-border-bottom:4px solid #fdb813; /* Yellow accent */
 }
+
 nav a{
-color:white;padding:15px 24px;text-decoration:none;font-weight:bold;font-size:15px;
-}
-nav a:hover{background:#fdb813;color:#c8102e;}
-
-/* HERO */
-.hero{
-background:#007a33; /* Green */
 color:white;
-text-align:center;
-padding:100px 20px;
-}
-.hero h1{font-size:44px;margin-bottom:10px;}
-.hero p{font-size:18px;margin-bottom:25px;}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-padding:13px 24px;
-margin:10px;
-background:#fdb813; /* Yellow */
-color:#c8102e; /* Red text */
 text-decoration:none;
-border-radius:4px;
+padding:14px 20px;
 font-weight:bold;
 }
-.btn:hover{background:#e6b500;}
+
+nav a:hover{
+background:#fdb813; /* Yellow hover */
+color:#c8102e;
+}
 
 /* SECTIONS */
-section{padding:70px 20px;max-width:1100px;margin:auto;}
-h2{margin-bottom:25px;color:#c8102e;border-left:6px solid #fdb813;padding-left:10px;}
 
-/* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
-
-/* CARD */
-.card{
-background:#ffffff; /* White */
-padding:20px;
-border-radius:6px;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
-text-align:center;
-border-top:4px solid #fdb813; /* Yellow accent */
+section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
 }
-.card img{width:100%;border-radius:5px;margin-bottom:10px;}
+
+h2{
+margin-bottom:25px;
+border-bottom:3px solid #fdb813; /* Yellow */
+display:inline-block;
+padding-bottom:5px;
+color:#c8102e; /* Red heading */
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.service{
+background:#ffffff; /* White cards */
+padding:18px;
+border-radius:10px;
+text-align:center;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.project{
+background:#ffffff; /* White */
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.project-content{
+padding:15px;
+}
 
 /* CONTACT */
+
 .contact{
-background:#ffffff; /* White */
-padding:40px;
-border-radius:8px;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
 text-align:center;
 }
-.contact p{font-size:20px;font-weight:bold;margin:10px 0;}
+
 .contact a{
 display:inline-block;
+padding:14px 20px;
 margin:10px;
-padding:12px 22px;
-background:#c8102e; /* Red */
+border-radius:8px;
 color:white;
 text-decoration:none;
-border-radius:4px;
+font-weight:bold;
 }
-.contact a:hover{background:#fdb813;color:#c8102e;}
+
+.call-btn{
+background:#007a33; /* Green */
+}
+
+.email-btn{
+background:#fdb813; /* Yellow */
+color:#c8102e; /* Red text */
+}
+
+.whatsapp-btn{
+background:#25D366; /* Green WhatsApp */
+}
+
+.instagram-btn{
+background:#E1306C; /* Instagram pink stays */
+}
+
+.maps-btn{
+background:#c8102e; /* Red */
+}
+
+/* ADDRESS */
+
+.address{
+font-size:20px;
+font-weight:bold;
+margin-top:10px;
+}
 
 /* MAP */
-.map iframe{width:100%;height:350px;border:0;border-radius:8px;}
+
+iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:10px;
+margin-top:20px;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:16px 18px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
 
 /* FOOTER */
+
 footer{
 background:#c8102e; /* Red */
 color:white;
@@ -106,98 +197,135 @@ padding:20px;
 margin-top:40px;
 }
 
-/* WHATSAPP FLOAT */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50%;
-font-size:22px;
-text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
 </style>
 </head>
+
 <body>
 
 <header>
-<img src="images/logo.png" alt="Logo">
-<h1>Tin Shade Noida Wale</h1>
-<p>Industrial Tin Shed & Roofing Contractors</p>
+
+<img src="images/logo.png">
+
+<h1>Tin Shade Shelter Solutions</h1>
+
+<p>Professional Tin Shed, MS Structure & Warehouse Roofing</p>
+
 </header>
 
 <nav>
-<a href="#">Home</a>
+
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
-<section class="hero">
-<h1>Industrial Tin Shed Contractors</h1>
-<p>Warehouse Roofing • Factory Shed • Parking Shade • MS Structure Work</p>
-<a href="tel:8527977714" class="btn"><i class="fa-solid fa-phone"></i> Call Now</a>
-<a href="mailto:tinshade.noida@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Email</a>
-</section>
-
 <section id="services">
+
 <h2>Our Services</h2>
-<div class="grid">
-<div class="card">
-<h3>Tin Shed Installation</h3>
-<p>Professional tin shed installation for homes, factories, and warehouses.</p>
+
+<div class="services">
+
+<div class="service">Tin Shade Noida</div>
+<div class="service">Warehouse Tin Shed</div>
+<div class="service">Factory Shed Work</div>
+<div class="service">MS Structure Fabrication</div>
+<div class="service">Industrial Platform Making</div>
+<div class="service">Parking Shed</div>
+
 </div>
-<div class="card">
-<h3>Warehouse Roofing</h3>
-<p>Durable metal roofing for industrial warehouse structures.</p>
-</div>
-<div class="card">
-<h3>Parking Shade</h3>
-<p>Weather resistant parking shade structures.</p>
-</div>
-<div class="card">
-<h3>Industrial Platform</h3>
-<p>MS structure fabrication and industrial platforms.</p>
-</div>
-</div>
+
 </section>
 
 <section id="projects">
-<h2>Recent Projects</h2>
-<div class="grid">
-<div class="card"><img src="images/project1.jpg"><p>Unicure India Ltd Roof Shade</p></div>
-<div class="card"><img src="images/project2.jpg"><p>Warehouse Tin Shed Installation</p></div>
-<div class="card"><img src="images/project3.jpg"><p>Industrial Platform Fabrication</p></div>
-<div class="card"><img src="images/project4.jpg"><p>Parking Shed Structure</p></div>
-</div>
-</section>
 
-<section class="map">
-<h2>Our Office Location</h2>
-<iframe src="https://maps.google.com/maps?q=D179%20Sector%2010%20Noida&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<h2>Recent Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<img src="images/project1.jpg">
+<div class="project-content">
+<h3>MS Structure Work</h3>
+<p>Steel framework fabrication for industrial roofing.</p>
+</div>
+</div>
+
+<div class="project">
+<img src="images/project2.jpg">
+<div class="project-content">
+<h3>Tin Shed Installation</h3>
+<p>Durable tin shed structure for factory area.</p>
+</div>
+</div>
+
+<div class="project">
+<img src="images/project3.jpg">
+<div class="project-content">
+<h3>Warehouse Roofing</h3>
+<p>Large warehouse roofing installation.</p>
+</div>
+</div>
+
+<div class="project">
+<img src="images/project4.jpg">
+<div class="project-content">
+<h3>Industrial Platform</h3>
+<p>Metal platform fabrication and installation.</p>
+</div>
+</div>
+
+</div>
+
 </section>
 
 <section id="contact">
-<div class="contact">
+
 <h2>Contact</h2>
+
+<div class="contact">
+
+<p class="address">📍 D179 Sector 10 Noida, India</p>
+
 <p>📞 Phone: 8527977714</p>
+
 <p>📧 Email: tinshade.noida@gmail.com</p>
-<p style="font-size:22px;font-weight:bold;">📍 Address: D179 Sector 10 Noida</p>
-<a href="https://wa.me/918527977714"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-<a href="https://www.instagram.com/tin_shade_wearhouse"><i class="fab fa-instagram"></i> Instagram</a>
-<a href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7"><i class="fa-solid fa-location-dot"></i> Open Location</a>
+
+<a class="call-btn" href="tel:+918527977714">
+<i class="fa-solid fa-phone"></i> Call Now
+</a>
+
+<a class="email-btn" href="mailto:tinshade.noida@gmail.com">
+<i class="fa-solid fa-envelope"></i> Email
+</a>
+
+<a class="whatsapp-btn" href="https://wa.me/918527977714">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+
+<a class="instagram-btn" href="https://www.instagram.com/tin_shade_wearhouse">
+<i class="fa-brands fa-instagram"></i> Instagram
+</a>
+
+<a class="maps-btn" href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7">
+<i class="fa-solid fa-location-dot"></i> Open Location
+</a>
+
 </div>
+
+<iframe src="https://www.google.com/maps?q=D179%20Sector%2010%20Noida&output=embed"></iframe>
+
 </section>
 
 <footer>
-<p>© 2026 Tin Shade Noida Wale | All Rights Reserved</p>
+
+<p>© 2026 Tin Shade Noida</p>
+
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918527977714"><i class="fab fa-whatsapp"></i></a>
+<a class="whatsapp-float" href="https://wa.me/918527977714">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
 
 </body>
   </html>
