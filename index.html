@@ -31,7 +31,7 @@ padding:50px 20px;
 }
 
 header img{
-width:180px;
+width:170px;
 margin-bottom:15px;
 }
 
@@ -71,15 +71,6 @@ border-bottom:3px solid #f59e0b;
 display:inline-block;
 padding-bottom:5px;
 color:#0f172a;
-}
-
-/* ABOUT */
-
-.about{
-display:grid;
-grid-template-columns:1fr 2fr;
-gap:30px;
-align-items:center;
 }
 
 /* SERVICES */
@@ -124,6 +115,16 @@ object-fit:cover;
 padding:15px;
 }
 
+/* CLIENTS */
+
+.clients{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
 /* CONTACT */
 
 .contact{
@@ -141,17 +142,29 @@ margin:10px;
 font-weight:bold;
 }
 
-/* MAP */
+/* FLOATING WHATSAPP */
 
-.map{
-margin-top:30px;
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
+
+/* MAP */
 
 iframe{
 width:100%;
 height:350px;
 border:0;
 border-radius:10px;
+margin-top:20px;
 }
 
 /* FOOTER */
@@ -168,11 +181,6 @@ margin-top:40px;
 
 @media(max-width:768px){
 
-.about{
-grid-template-columns:1fr;
-text-align:center;
-}
-
 nav{
 flex-direction:column;
 }
@@ -186,45 +194,22 @@ flex-direction:column;
 
 <header>
 
-<img src="images/logo.png" alt="Tin Shade Shelter Solutions Logo">
+<img src="images/logo.png">
 
 <h1>Tin Shade Shelter Solutions</h1>
 
-<p>Professional Tin Shed, Warehouse Roofing & MS Structure Work</p>
+<p>Professional Tin Shed, MS Structure & Warehouse Roofing</p>
 
 </header>
 
 <nav>
 
-<a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
+<a href="#clients">Clients</a>
 <a href="#contact">Contact</a>
 
 </nav>
-
-<section id="about">
-
-<h2>About Us</h2>
-
-<div class="about">
-
-<p>
-
-<strong>Tin Shade Shelter Solutions</strong> provides strong and reliable
-tin shed and industrial roofing solutions across Noida and nearby areas.
-
-We specialize in warehouse sheds, factory roofing,
-MS structure work, parking sheds and terrace tin shade installation.
-
-Our focus is durable materials, strong structures
-and professional installation.
-
-</p>
-
-</div>
-
-</section>
 
 <section id="services">
 
@@ -235,7 +220,7 @@ and professional installation.
 <div class="service">Tin Shade Installation</div>
 <div class="service">Warehouse Tin Shed</div>
 <div class="service">Factory Shed Work</div>
-<div class="service">MS Structure Fabrication</div>
+<div class="service">MS Structure Work</div>
 <div class="service">Industrial Platform Making</div>
 <div class="service">Parking Shed</div>
 
@@ -250,60 +235,52 @@ and professional installation.
 <div class="projects">
 
 <div class="project">
-
 <img src="images/project1.jpg">
-
 <div class="project-content">
-
 <h3>MS Structure Work</h3>
-
-<p>Strong metal structure fabrication for industrial roofing projects.</p>
-
+<p>Strong steel framework construction for industrial buildings.</p>
 </div>
-
 </div>
 
 <div class="project">
-
 <img src="images/project2.jpg">
-
 <div class="project-content">
-
-<h3>Tin Shade Structure</h3>
-
-<p>Installation of tin shed framework for commercial buildings.</p>
-
+<h3>Tin Shade Work</h3>
+<p>Commercial tin shed installation with durable metal support.</p>
 </div>
-
 </div>
 
 <div class="project">
-
 <img src="images/project3.jpg">
-
 <div class="project-content">
-
-<h3>Industrial Tin Shed</h3>
-
-<p>Heavy-duty warehouse roofing installation.</p>
-
+<h3>Warehouse Roofing</h3>
+<p>Large industrial roofing system using high-quality sheets.</p>
 </div>
-
 </div>
 
 <div class="project">
-
 <img src="images/project4.jpg">
-
 <div class="project-content">
-
-<h3>Factory Roofing Project</h3>
-
-<p>Complete tin roofing solution for industrial units.</p>
-
+<h3>Factory Roofing</h3>
+<p>Complete roofing structure built for factory production unit.</p>
+</div>
 </div>
 
 </div>
+
+</section>
+
+<section id="clients">
+
+<h2>Our Clients</h2>
+
+<div class="clients">
+
+<p>Industrial roofing and structure work completed for companies including:</p>
+
+<h3>Unicure India Ltd.</h3>
+
+<p>Roof shade and metal platform construction.</p>
 
 </div>
 
@@ -323,23 +300,23 @@ and professional installation.
 
 <a href="https://wa.me/918527977714">WhatsApp</a>
 
+<a href="https://www.instagram.com/tin_shade_wearhouse">Instagram</a>
+
 <a href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7">Open Location</a>
 
 </div>
 
-<div class="map">
-
 <iframe src="https://www.google.com/maps?q=D179%20Sector%2010%20Noida&output=embed"></iframe>
-
-</div>
 
 </section>
 
 <footer>
 
-<p>© 2026 Tin Shade Shelter Solutions | All Rights Reserved</p>
+<p>© 2026 Tin Shade Shelter Solutions</p>
 
 </footer>
 
+<a class="whatsapp" href="https://wa.me/918527977714">WhatsApp</a>
+
 </body>
-</html>
+  </html>
