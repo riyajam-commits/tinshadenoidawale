@@ -3,40 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tin Shade Noida Wale</title>
+
+<title>Tin Shade Shelter Solutions</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
+background:#f8fafc;
+color:#1f2937;
 line-height:1.6;
-background:#f4f6f9;
-color:#333;
 }
 
+/* HEADER */
+
 header{
-background:#1f2937;
+background:#0f172a;
 color:white;
-padding:40px 20px;
 text-align:center;
+padding:50px 20px;
 }
 
 header img{
-width:120px;
-height:120px;
-border-radius:50%;
-object-fit:cover;
+width:180px;
 margin-bottom:15px;
-border:4px solid #fff;
 }
 
+/* NAVIGATION */
+
 nav{
-background:#111827;
+background:#1e293b;
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
@@ -44,28 +46,34 @@ flex-wrap:wrap;
 
 nav a{
 color:white;
-padding:14px 20px;
 text-decoration:none;
+padding:14px 20px;
 font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
-background:#374151;
+background:#f59e0b;
+color:black;
 }
 
+/* SECTIONS */
+
 section{
-padding:60px 20px;
-max-width:1000px;
+padding:70px 20px;
+max-width:1100px;
 margin:auto;
 }
 
 h2{
-margin-bottom:20px;
-color:#1f2937;
-border-bottom:3px solid #2563eb;
+margin-bottom:25px;
+border-bottom:3px solid #f59e0b;
 display:inline-block;
 padding-bottom:5px;
+color:#0f172a;
 }
+
+/* ABOUT */
 
 .about{
 display:grid;
@@ -74,34 +82,49 @@ gap:30px;
 align-items:center;
 }
 
-.about img{
-width:100%;
-max-width:220px;
-border-radius:10px;
-}
+/* SERVICES */
 
-.skills{
+.services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
 }
 
-.skill{
+.service{
 background:white;
-padding:15px;
-border-radius:8px;
+padding:18px;
+border-radius:10px;
 text-align:center;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.experience-item,
-.project-item{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:8px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
+
+.project{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.project-content{
+padding:15px;
+}
+
+/* CONTACT */
 
 .contact{
 text-align:center;
@@ -109,25 +132,39 @@ text-align:center;
 
 .contact a{
 display:inline-block;
-margin:10px;
+background:#f59e0b;
 color:white;
-background:#2563eb;
-padding:10px 18px;
+padding:12px 20px;
 border-radius:6px;
 text-decoration:none;
+margin:10px;
+font-weight:bold;
 }
 
-.contact a:hover{
-background:#1e40af;
+/* MAP */
+
+.map{
+margin-top:30px;
 }
+
+iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:10px;
+}
+
+/* FOOTER */
 
 footer{
+background:#0f172a;
+color:white;
 text-align:center;
 padding:20px;
-background:#111827;
-color:white;
 margin-top:40px;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -141,124 +178,167 @@ flex-direction:column;
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="profile-placeholder.jpg" alt="Business Photo">
-<h1>Tin Shade Noida Wale</h1>
-<p>Professional Tin Shade & Warehouse Roofing Solutions</p>
+
+<img src="images/logo.png" alt="Tin Shade Shelter Solutions Logo">
+
+<h1>Tin Shade Shelter Solutions</h1>
+
+<p>Professional Tin Shed, Warehouse Roofing & MS Structure Work</p>
+
 </header>
 
 <nav>
+
 <a href="#about">About</a>
-<a href="#skills">Services</a>
-<a href="#experience">Experience</a>
+<a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 <section id="about">
-<h2>About</h2>
+
+<h2>About Us</h2>
+
 <div class="about">
-<img src="photo-placeholder.jpg" alt="Tin Shade Work">
+
 <p>
-Welcome to <strong>Tin Shade Noida Wale</strong>. We provide strong, reliable and affordable
-tin shade and metal roofing solutions for homes, warehouses, shops and industrial areas.
 
-Our work includes installation of durable tin sheds, parking shades, terrace shades,
-warehouse roofing and custom metal structures. We focus on quality material,
-strong structures and customer satisfaction.
+<strong>Tin Shade Shelter Solutions</strong> provides strong and reliable
+tin shed and industrial roofing solutions across Noida and nearby areas.
+
+We specialize in warehouse sheds, factory roofing,
+MS structure work, parking sheds and terrace tin shade installation.
+
+Our focus is durable materials, strong structures
+and professional installation.
+
 </p>
+
 </div>
+
 </section>
 
-<section id="skills">
-<h2>Services</h2>
-<div class="skills">
-<div class="skill">Tin Shade Installation</div>
-<div class="skill">Warehouse Tin Shed</div>
-<div class="skill">Parking Shade</div>
-<div class="skill">Factory & Industrial Shed</div>
-<div class="skill">Terrace Tin Shade</div>
-<div class="skill">Custom Metal Structure</div>
-</div>
-</section>
+<section id="services">
 
-<section id="experience">
-<h2>Experience</h2>
+<h2>Our Services</h2>
 
-<div class="experience-item">
-<h3>Tin Shade & Warehouse Specialist</h3>
-<p><strong>Tin Shade Noida Wale</strong></p>
-<p>Professional installation of tin sheds for houses, shops, warehouses,
-parking areas and factories with strong metal framework.</p>
-</div>
+<div class="services">
 
-<div class="experience-item">
-<h3>Metal Structure Work</h3>
-<p>Experienced in designing and building durable metal shade structures
-with long-lasting roofing solutions.</p>
+<div class="service">Tin Shade Installation</div>
+<div class="service">Warehouse Tin Shed</div>
+<div class="service">Factory Shed Work</div>
+<div class="service">MS Structure Fabrication</div>
+<div class="service">Industrial Platform Making</div>
+<div class="service">Parking Shed</div>
+
 </div>
 
 </section>
 
 <section id="projects">
-<h2>Projects</h2>
 
-  <div class="project-item">
-<h3>Unicure India Ltd Roof Shade</h3>
-<img src="images/unicure-roof.jpg" style="width:100%;border-radius:8px;">
-<p>Industrial roof shade installation for Unicure India Ltd.</p>
-</div>
-<div class="project-item">
-<h3>Warehouse Tin Shed</h3>
-<p>Installation of large warehouse tin shed structures for storage and industrial use.</p>
+<h2>Recent Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<img src="images/project1.jpg">
+
+<div class="project-content">
+
+<h3>MS Structure Work</h3>
+
+<p>Strong metal structure fabrication for industrial roofing projects.</p>
+
 </div>
 
-<div class="project-item">
-<h3>Shop & Market Shade</h3>
-<p>Durable tin shade roofing for shops and commercial markets.</p>
 </div>
 
-<div class="project-item">
-<h3>Parking Shade Projects</h3>
-<p>Weather-resistant parking shed installations using strong metal frames.</p>
+<div class="project">
+
+<img src="images/project2.jpg">
+
+<div class="project-content">
+
+<h3>Tin Shade Structure</h3>
+
+<p>Installation of tin shed framework for commercial buildings.</p>
+
+</div>
+
+</div>
+
+<div class="project">
+
+<img src="images/project3.jpg">
+
+<div class="project-content">
+
+<h3>Industrial Tin Shed</h3>
+
+<p>Heavy-duty warehouse roofing installation.</p>
+
+</div>
+
+</div>
+
+<div class="project">
+
+<img src="images/project4.jpg">
+
+<div class="project-content">
+
+<h3>Factory Roofing Project</h3>
+
+<p>Complete tin roofing solution for industrial units.</p>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
 
 <section id="contact">
+
 <h2>Contact</h2>
+
 <div class="contact">
 
 <p>📞 Phone: 8527977714</p>
+
 <p>📧 Email: tinshade.noida@gmail.com</p>
-<p>📍 Address: D179-Sector 10 Noida, India</p>
+
+<p>📍 D179 Sector 10 Noida, India</p>
 
 <a href="https://wa.me/918527977714">WhatsApp</a>
-<a href="https://www.instagram.com/tin_shade_wearhouse?igsh=MXgyOHAyOWJzNTczYQ==">Instagram</a>
+
+<a href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7">Open Location</a>
+
+</div>
 
 <div class="map">
 
-<iframe 
-src="https://www.google.com/maps?q=D179%20Sector%2010%20Noida&output=embed"
-width="100%" 
-height="350"
-style="border:0;border-radius:10px;"
-loading="lazy">
-</iframe>
+<iframe src="https://www.google.com/maps?q=D179%20Sector%2010%20Noida&output=embed"></iframe>
 
 </div>
-  <a href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7">
-Open Location in Google Maps
-</a>
+
 </section>
 
 <footer>
-<p>© 2026 Tin Shade Noida Wale | All Rights Reserved</p>
+
+<p>© 2026 Tin Shade Shelter Solutions | All Rights Reserved</p>
+
 </footer>
 
 </body>
