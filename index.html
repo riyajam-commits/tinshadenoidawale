@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tin Shade Shelter Solutions</title>
+<title>Tin Shade</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -35,7 +38,7 @@ width:170px;
 margin-bottom:15px;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 nav{
 background:#1e293b;
@@ -49,7 +52,6 @@ color:white;
 text-decoration:none;
 padding:14px 20px;
 font-weight:bold;
-transition:0.3s;
 }
 
 nav a:hover{
@@ -115,16 +117,6 @@ object-fit:cover;
 padding:15px;
 }
 
-/* CLIENTS */
-
-.clients{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-text-align:center;
-}
-
 /* CONTACT */
 
 .contact{
@@ -133,28 +125,40 @@ text-align:center;
 
 .contact a{
 display:inline-block;
-background:#f59e0b;
-color:white;
-padding:12px 20px;
-border-radius:6px;
-text-decoration:none;
+padding:14px 20px;
 margin:10px;
+border-radius:8px;
+color:white;
+text-decoration:none;
 font-weight:bold;
 }
 
-/* FLOATING WHATSAPP */
+.call-btn{
+background:#16a34a;
+}
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
+.email-btn{
+background:#2563eb;
+}
+
+.whatsapp-btn{
 background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50px;
+}
+
+.instagram-btn{
+background:#E1306C;
+}
+
+.maps-btn{
+background:#ea4335;
+}
+
+/* ADDRESS */
+
+.address{
+font-size:20px;
 font-weight:bold;
-text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+margin-top:10px;
 }
 
 /* MAP */
@@ -167,6 +171,21 @@ border-radius:10px;
 margin-top:20px;
 }
 
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:16px 18px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
 /* FOOTER */
 
 footer{
@@ -175,16 +194,6 @@ color:white;
 text-align:center;
 padding:20px;
 margin-top:40px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-nav{
-flex-direction:column;
-}
-
 }
 
 </style>
@@ -206,7 +215,6 @@ flex-direction:column;
 
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
-<a href="#clients">Clients</a>
 <a href="#contact">Contact</a>
 
 </nav>
@@ -220,7 +228,7 @@ flex-direction:column;
 <div class="service">Tin Shade Installation</div>
 <div class="service">Warehouse Tin Shed</div>
 <div class="service">Factory Shed Work</div>
-<div class="service">MS Structure Work</div>
+<div class="service">MS Structure Fabrication</div>
 <div class="service">Industrial Platform Making</div>
 <div class="service">Parking Shed</div>
 
@@ -238,15 +246,15 @@ flex-direction:column;
 <img src="images/project1.jpg">
 <div class="project-content">
 <h3>MS Structure Work</h3>
-<p>Strong steel framework construction for industrial buildings.</p>
+<p>Steel framework fabrication for industrial roofing.</p>
 </div>
 </div>
 
 <div class="project">
 <img src="images/project2.jpg">
 <div class="project-content">
-<h3>Tin Shade Work</h3>
-<p>Commercial tin shed installation with durable metal support.</p>
+<h3>Tin Shed Installation</h3>
+<p>Durable tin shed structure for factory area.</p>
 </div>
 </div>
 
@@ -254,33 +262,17 @@ flex-direction:column;
 <img src="images/project3.jpg">
 <div class="project-content">
 <h3>Warehouse Roofing</h3>
-<p>Large industrial roofing system using high-quality sheets.</p>
+<p>Large warehouse roofing installation.</p>
 </div>
 </div>
 
 <div class="project">
 <img src="images/project4.jpg">
 <div class="project-content">
-<h3>Factory Roofing</h3>
-<p>Complete roofing structure built for factory production unit.</p>
+<h3>Industrial Platform</h3>
+<p>Metal platform fabrication and installation.</p>
 </div>
 </div>
-
-</div>
-
-</section>
-
-<section id="clients">
-
-<h2>Our Clients</h2>
-
-<div class="clients">
-
-<p>Industrial roofing and structure work completed for companies including:</p>
-
-<h3>Unicure India Ltd.</h3>
-
-<p>Roof shade and metal platform construction.</p>
 
 </div>
 
@@ -292,17 +284,31 @@ flex-direction:column;
 
 <div class="contact">
 
+<p class="address">📍 D179 Sector 10 Noida, India</p>
+
 <p>📞 Phone: 8527977714</p>
 
 <p>📧 Email: tinshade.noida@gmail.com</p>
 
-<p>📍 D179 Sector 10 Noida, India</p>
+<a class="call-btn" href="tel:+918527977714">
+<i class="fa-solid fa-phone"></i> Call Now
+</a>
 
-<a href="https://wa.me/918527977714">WhatsApp</a>
+<a class="email-btn" href="mailto:tinshade.noida@gmail.com">
+<i class="fa-solid fa-envelope"></i> Email
+</a>
 
-<a href="https://www.instagram.com/tin_shade_wearhouse">Instagram</a>
+<a class="whatsapp-btn" href="https://wa.me/918527977714">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
 
-<a href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7">Open Location</a>
+<a class="instagram-btn" href="https://www.instagram.com/tin_shade_wearhouse">
+<i class="fa-brands fa-instagram"></i> Instagram
+</a>
+
+<a class="maps-btn" href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7">
+<i class="fa-solid fa-location-dot"></i> Open Location
+</a>
 
 </div>
 
@@ -312,11 +318,13 @@ flex-direction:column;
 
 <footer>
 
-<p>© 2026 Tin Shade Shelter Solutions</p>
+<p>© 2026 Tin Shade</p>
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918527977714">WhatsApp</a>
+<a class="whatsapp-float" href="https://wa.me/918527977714">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
 
 </body>
-  </html>
+                        </html>
