@@ -94,38 +94,22 @@ nav a:hover { background: var(--sky-dark); }
   height: 100%;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
-.slide-bg {
+.slide-img {
   position: absolute; inset:0;
-  background: linear-gradient(135deg, var(--sky-dark) 0%, var(--sky) 60%, #7dd3fc 100%);
+  width:100%; height:100%;
+  object-fit: cover;
+  object-position: center;
 }
-.slide:nth-child(2) .slide-bg { background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 60%, #f87171 100%); }
-.slide:nth-child(3) .slide-bg { background: linear-gradient(135deg, #0369a1 0%, var(--sky) 60%, #38bdf8 100%); }
-.slide-pattern {
-  position:absolute; inset:0;
-  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 0, transparent 50%);
-  background-size: 30px 30px;
-}
-.slide-content {
+.slide-overlay {
   position: relative;
-  z-index:2;
+  z-index: 2;
+  padding: 24px;
+  width:100%;
   text-align: center;
-  color: #fff;
-  padding: 20px;
-}
-.slide-content h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(28px, 5vw, 52px);
-  font-weight: 800;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
-  margin-bottom: 14px;
-}
-.slide-content p {
-  font-size: clamp(15px, 2vw, 20px);
-  opacity: 0.92;
-  margin-bottom: 28px;
+  background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 100%);
 }
 .slide-btn {
   background: #fff;
@@ -136,12 +120,12 @@ nav a:hover { background: var(--sky-dark); }
   font-weight: 700;
   text-decoration: none;
   font-size: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
   transition: transform 0.2s, box-shadow 0.2s;
   display: inline-block;
+  margin-bottom: 10px;
 }
-.slide-btn:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,0,0,0.2); }
-.slide:nth-child(2) .slide-btn { color: var(--red); }
+.slide-btn:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,0,0,0.3); }
 .hero-prev, .hero-next {
   position: absolute; top:50%; transform:translateY(-50%);
   background: rgba(255,255,255,0.25); border:none; color:#fff;
@@ -372,6 +356,50 @@ section { padding: 70px 20px; }
   display:block; max-width:1100px; margin:0 auto;
 }
 
+
+/* ── GALLERY ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 20px;
+}
+.gallery-item {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  aspect-ratio: 4/3;
+}
+.gallery-item img {
+  width:100%; height:100%;
+  object-fit: cover;
+  transition: transform 0.35s;
+  display: block;
+}
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-overlay {
+  position: absolute; inset:0;
+  background: rgba(14,165,233,0.0);
+  display: flex; align-items:center; justify-content:center;
+  font-size: 30px; color: #fff;
+  transition: background 0.3s;
+  opacity: 0;
+}
+.gallery-item:hover .gallery-overlay { background: rgba(14,165,233,0.45); opacity:1; }
+
+/* ── PROJECT CARD ZOOM ── */
+.zoom-icon {
+  position: absolute; top:10px; right:10px;
+  background: rgba(255,255,255,0.9);
+  color: var(--sky-dark);
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items:center; justify-content:center;
+  font-size: 14px; opacity:0; transition: opacity 0.2s;
+}
+.project-card:hover .zoom-icon { opacity: 1; }
+.project-card { cursor: pointer; }
+
 /* ── FOOTER ── */
 footer {
   background: linear-gradient(135deg, var(--sky-dark) 0%, var(--sky) 100%);
@@ -546,6 +574,7 @@ footer {
   <a href="#about">About Us</a>
   <a href="#services">Services</a>
   <a href="#projects">Projects</a>
+  <a href="#gallery">Gallery</a>
   <a href="#why">Why Us</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -554,29 +583,26 @@ footer {
 <div class="hero">
   <div class="slides" id="slides">
     <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-pattern"></div>
-      <div class="slide-content">
-        <h2>Professional Tin Shed Solutions</h2>
-        <p>Trusted Manufacturer of Industrial & Warehouse Roofing in Noida</p>
+      <img src="images/slider1.png" alt="Tin Shade Noida - टिन शेड बनवायें" class="slide-img">
+      <div class="slide-overlay">
         <a href="#contact" class="slide-btn">Get Free Quote</a>
       </div>
     </div>
     <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-pattern"></div>
-      <div class="slide-content">
-        <h2>MS Structure Fabrication</h2>
-        <p>Heavy Duty Steel Framework for Factories, Warehouses & Parking Sheds</p>
+      <img src="images/slider2.png" alt="Tin Shade Noida - Your Reliable Partner" class="slide-img">
+      <div class="slide-overlay">
         <a href="#services" class="slide-btn">Our Services</a>
       </div>
     </div>
     <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-pattern"></div>
-      <div class="slide-content">
-        <h2>Industrial Platform Making</h2>
-        <p>Complete Shed & Roofing Solutions across Noida, Greater Noida & NCR</p>
+      <img src="images/slider3.png" alt="Tin Shade Noida - Industrial Shed" class="slide-img">
+      <div class="slide-overlay">
+        <a href="tel:+918527977714" class="slide-btn">📞 Call Now</a>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/slider4.png" alt="Tin Shade Noida - PEB Structure" class="slide-img">
+      <div class="slide-overlay">
         <a href="#projects" class="slide-btn">View Projects</a>
       </div>
     </div>
@@ -584,7 +610,7 @@ footer {
   <button class="hero-prev" onclick="moveSlide(-1)">&#8249;</button>
   <button class="hero-next" onclick="moveSlide(1)">&#8250;</button>
   <div class="hero-dots" id="dots">
-    <span class="active"></span><span></span><span></span>
+    <span class="active"></span><span></span><span></span><span></span>
   </div>
 </div>
 
@@ -660,52 +686,65 @@ footer {
     <div class="section-title">
       <div class="title-line"></div>
       <h2>Recent <span>Projects</span></h2>
-      <p>Some of our latest completed work across Noida & NCR</p>
+      <p>Hamare completed projects across Noida, Delhi & NCR</p>
     </div>
     <div class="projects-grid">
-      <div class="project-card">
+      <div class="project-card" onclick="openLightbox('images/project1.png')">
         <div class="img-wrap">
-          <img src="images/project1.jpg" alt="MS Structure Work" onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-helmet-safety\'></i><div class=\'badge\'>Completed</div>'">
+          <img src="images/project1.png" alt="MS Structure - Tin Shade Noida">
           <span class="badge">Completed</span>
+          <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
         </div>
         <div class="card-body">
-          <h3>MS Structure Work</h3>
-          <p>Steel framework fabrication for industrial roofing.</p>
+          <h3>MS Structure Fabrication</h3>
+          <p>Steel framework for industrial shed — Noida & NCR</p>
         </div>
       </div>
-      <div class="project-card">
+      <div class="project-card" onclick="openLightbox('images/project2.png')">
         <div class="img-wrap">
-          <img src="images/project2.jpg" alt="Tin Shed Installation" onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-house-chimney-window\'></i><div class=\'badge\'>Completed</div>'">
+          <img src="images/project2.png" alt="Projects - Tin Shade Noida">
           <span class="badge">Completed</span>
+          <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
         </div>
         <div class="card-body">
-          <h3>Tin Shed Installation</h3>
-          <p>Durable tin shed structure for factory area.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="img-wrap">
-          <img src="images/project3.jpg" alt="Warehouse Roofing" onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-warehouse\'></i><div class=\'badge\'>Completed</div>'">
-          <span class="badge">Completed</span>
-        </div>
-        <div class="card-body">
-          <h3>Warehouse Roofing</h3>
-          <p>Large warehouse roofing installation.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="img-wrap">
-          <img src="images/project4.jpg" alt="Industrial Platform" onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-layer-group\'></i><div class=\'badge\'>Completed</div>'">
-          <span class="badge">Completed</span>
-        </div>
-        <div class="card-body">
-          <h3>Industrial Platform</h3>
-          <p>Metal platform fabrication and installation.</p>
+          <h3>Multiple Projects</h3>
+          <p>Neellu Packaging, Hardoi Kanpur, Noida Aero Club & more</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- GALLERY -->
+<section id="gallery" style="background:#fff; padding:70px 20px;">
+  <div class="section-inner">
+    <div class="section-title">
+      <div class="title-line"></div>
+      <h2>Our <span>Gallery</span></h2>
+      <p>Click on any photo to view full size</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox('images/gallery1.png')">
+        <img src="images/gallery1.png" alt="PEB Structure - Tin Shade Noida">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('images/gallery2.png')">
+        <img src="images/gallery2.png" alt="Warehouse Design - Tin Shade Noida">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('images/gallery3.png')">
+        <img src="images/gallery3.png" alt="PEB Building - Tin Shade Noida">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; flex-direction:column;">
+  <button onclick="closeLightbox()" style="position:absolute; top:18px; right:18px; background:white; border:none; border-radius:50%; width:42px; height:42px; font-size:20px; cursor:pointer; font-weight:bold; z-index:10000;">✕</button>
+  <img id="lightbox-img" src="" style="max-width:95vw; max-height:90vh; border-radius:10px; box-shadow:0 8px 40px rgba(0,0,0,0.5); object-fit:contain;">
+</div>
 
 <!-- WHY CHOOSE US -->
 <section id="why">
@@ -877,6 +916,7 @@ footer {
       <a href="#about">About Us</a>
       <a href="#services">Our Services</a>
       <a href="#projects">Projects</a>
+  <a href="#gallery">Gallery</a>
       <a href="#why">Why Choose Us</a>
       <a href="#contact">Contact Us</a>
     </div>
@@ -1052,11 +1092,27 @@ function sendMsg() {
 
 
 
+
+// LIGHTBOX
+function openLightbox(src) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+
 // SLIDER
 let current = 0;
 const slides = document.getElementById('slides');
 const dots = document.querySelectorAll('#dots span');
-const total = 3;
+const total = 4;
 function goTo(n) {
   current = (n + total) % total;
   slides.style.transform = 'translateX(-' + (current * 100) + '%)';
