@@ -1020,15 +1020,49 @@ function toggleChat() {
   }
 }
 
-function saveKey() {
+async function saveKey() {
   const k = document.getElementById('api-key-input').value.trim();
   if (!k.startsWith('sk-ant-')) {
     alert('Sahi API key daalo (sk-ant- se shuru honi chahiye)');
     return;
   }
-  apiKey = k;
-  localStorage.setItem('tsn_api_key', k);
-  showChatSection();
+  const btn = document.querySelector('.api-key-box button');
+  btn.textContent = '⏳ Checking...';
+  btn.disabled = true;
+
+  try {
+    const testRes = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': k,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 10,
+        messages: [{ role: 'user', content: 'hi' }]
+      })
+    });
+    const testData = await testRes.json();
+    if (testData.error && testData.error.type === 'authentication_error') {
+      alert('❌ API Key galat hai! Dobara check karo.');
+      btn.textContent = 'Activate Chat ✅';
+      btn.disabled = false;
+      return;
+    }
+    apiKey = k;
+    localStorage.setItem('tsn_api_key', k);
+    showChatSection();
+  } catch(e) {
+    // If CORS or network error, still try to proceed
+    apiKey = k;
+    localStorage.setItem('tsn_api_key', k);
+    showChatSection();
+  }
+  btn.textContent = 'Activate Chat ✅';
+  btn.disabled = false;
 }
 
 function showChatSection() {
@@ -1082,16 +1116,28 @@ async function sendMsg() {
     const data = await res.json();
     typingDiv.remove();
 
-    if (data.content && data.content[0]) {
+    if (data.error) {
+      console.error('API Error:', data.error);
+      if (data.error.type === 'authentication_error') {
+        addMsg('bot', '🔑 API Key galat hai. Neeche key dobara daalo.');
+        localStorage.removeItem('tsn_api_key');
+        apiKey = '';
+        document.getElementById('chat-section').style.display = 'none';
+        document.getElementById('api-key-section').style.display = 'block';
+      } else {
+        addMsg('bot', '❌ Error: ' + data.error.message + '\n\nCall karo: +91-8527977714');
+      }
+    } else if (data.content && data.content[0]) {
       const reply = data.content[0].text;
       chatHistory.push({ role: 'assistant', content: reply });
       addMsg('bot', reply);
     } else {
-      addMsg('bot', '❌ Kuch problem aayi. Please dobara try karo ya directly call karo: +91-8527977714');
+      addMsg('bot', '❌ Kuch problem aayi. Please call karo: +91-8527977714');
     }
   } catch(err) {
     typingDiv.remove();
-    addMsg('bot', '❌ Connection error. Please call karo: +91-8527977714');
+    console.error('Fetch error:', err);
+    addMsg('bot', '❌ Connection error. Internet check karo ya call karo: +91-8527977714');
   }
   document.getElementById('chat-send').disabled = false;
   document.getElementById('chat-input').focus();
