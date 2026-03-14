@@ -1,331 +1,575 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Tin Shade Noida</title>
-
+<title>Tin Shade Noida – Professional Tin Shed & MS Structure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
+:root {
+  --sky: #0ea5e9;
+  --sky-dark: #0284c7;
+  --sky-light: #e0f2fe;
+  --red: #c8102e;
+  --red-dark: #a00d24;
+  --white: #ffffff;
+  --gray: #f8fafc;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --shadow: 0 4px 24px rgba(14,165,233,0.10);
+  --shadow-red: 0 4px 24px rgba(200,16,46,0.12);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body { font-family:'Open Sans', sans-serif; color:var(--text); background:var(--white); }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+/* ── TOP BAR ── */
+.topbar {
+  background: var(--red);
+  color: #fff;
+  padding: 8px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.topbar a { color:#fff; text-decoration:none; margin-left:18px; }
+.topbar a:hover { text-decoration:underline; }
+.topbar .left { display:flex; align-items:center; gap:5px; }
+
+/* ── HEADER ── */
+header {
+  background: var(--white);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo-area { display:flex; align-items:center; gap:16px; }
+.logo-area img { width:80px; height:80px; object-fit:contain; border-radius:8px; }
+.logo-text h1 { font-family:'Montserrat', sans-serif; font-size:22px; font-weight:800; color:var(--red); line-height:1.2; }
+.logo-text p { font-size:12px; color:var(--sky-dark); font-weight:600; text-transform:uppercase; letter-spacing:1px; }
+
+/* ── NAV ── */
+nav {
+  background: var(--sky);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+  text-transform: uppercase;
+}
+nav a:hover { background: var(--sky-dark); }
+
+/* ── HERO SLIDER ── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+  background: var(--sky-dark);
+}
+.slides { display:flex; height:100%; transition: transform 0.6s cubic-bezier(.4,0,.2,1); }
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-bg {
+  position: absolute; inset:0;
+  background: linear-gradient(135deg, var(--sky-dark) 0%, var(--sky) 60%, #7dd3fc 100%);
+}
+.slide:nth-child(2) .slide-bg { background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 60%, #f87171 100%); }
+.slide:nth-child(3) .slide-bg { background: linear-gradient(135deg, #0369a1 0%, var(--sky) 60%, #38bdf8 100%); }
+.slide-pattern {
+  position:absolute; inset:0;
+  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 0, transparent 50%);
+  background-size: 30px 30px;
+}
+.slide-content {
+  position: relative;
+  z-index:2;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+.slide-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 800;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  margin-bottom: 14px;
+}
+.slide-content p {
+  font-size: clamp(15px, 2vw, 20px);
+  opacity: 0.92;
+  margin-bottom: 28px;
+}
+.slide-btn {
+  background: #fff;
+  color: var(--sky-dark);
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-family:'Montserrat',sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-block;
+}
+.slide-btn:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,0,0,0.2); }
+.slide:nth-child(2) .slide-btn { color: var(--red); }
+.hero-prev, .hero-next {
+  position: absolute; top:50%; transform:translateY(-50%);
+  background: rgba(255,255,255,0.25); border:none; color:#fff;
+  width:48px; height:48px; border-radius:50%; font-size:20px;
+  cursor:pointer; z-index:10; transition:background 0.2s; backdrop-filter:blur(4px);
+}
+.hero-prev { left:20px; }
+.hero-next { right:20px; }
+.hero-prev:hover, .hero-next:hover { background: rgba(255,255,255,0.45); }
+.hero-dots { position:absolute; bottom:18px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:10; }
+.hero-dots span {
+  width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.5); cursor:pointer; transition:background 0.2s;
+}
+.hero-dots span.active { background:#fff; }
+
+/* ── SECTION BASE ── */
+section { padding: 70px 20px; }
+.section-inner { max-width:1100px; margin:auto; }
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-title h2 {
+  font-family:'Montserrat',sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.section-title h2 span { color: var(--sky); }
+.title-line {
+  width: 60px; height: 4px;
+  background: linear-gradient(90deg, var(--sky), var(--red));
+  border-radius: 2px;
+  margin: 0 auto 12px;
+}
+.section-title p { color:var(--text-light); font-size:16px; }
+
+/* ── ABOUT ── */
+#about { background: var(--gray); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+@media(max-width:768px){ .about-grid { grid-template-columns:1fr; } }
+.about-img img {
+  width:100%; border-radius:16px;
+  box-shadow: var(--shadow);
+  object-fit:cover;
+  height:360px;
+}
+.about-img-placeholder {
+  width:100%; border-radius:16px;
+  height:360px;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #bae6fd 100%);
+  display:flex; align-items:center; justify-content:center;
+  flex-direction:column; gap:12px;
+  color: var(--sky-dark);
+  font-size:60px;
+  box-shadow: var(--shadow);
+}
+.about-img-placeholder p { font-size:14px; font-family:'Montserrat',sans-serif; font-weight:600; }
+.about-text h3 {
+  font-family:'Montserrat',sans-serif;
+  font-size:28px; font-weight:800; color:var(--red); margin-bottom:16px;
+}
+.about-text p { color:var(--text-light); line-height:1.9; margin-bottom:16px; font-size:15px; }
+.about-stats { display:flex; gap:24px; margin-top:24px; flex-wrap:wrap; }
+.stat {
+  background:#fff; border-radius:12px; padding:18px 24px;
+  text-align:center; box-shadow:var(--shadow);
+  border-top:3px solid var(--sky);
+  flex:1; min-width:100px;
+}
+.stat h4 { font-family:'Montserrat',sans-serif; font-size:28px; font-weight:800; color:var(--sky); }
+.stat p { font-size:12px; color:var(--text-light); font-weight:600; text-transform:uppercase; margin-top:4px; }
+
+/* ── SERVICES ── */
+#services { background:#fff; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+}
+.service-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 32px 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-bottom: 4px solid var(--sky);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.service-card:hover { transform:translateY(-6px); box-shadow:0 12px 32px rgba(14,165,233,0.18); border-color:var(--red); }
+.service-card .icon {
+  width:64px; height:64px; border-radius:50%;
+  background: linear-gradient(135deg, var(--sky-light), #bae6fd);
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 16px;
+  font-size:26px; color:var(--sky-dark);
+}
+.service-card h3 {
+  font-family:'Montserrat',sans-serif;
+  font-size:15px; font-weight:700; color:var(--text);
 }
 
-body{
-background:#ffffff; /* White background */
-color:#1f2937;
-line-height:1.6;
+/* ── PROJECTS ── */
+#projects { background:var(--gray); }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 28px;
+}
+.project-card {
+  background:#fff; border-radius:14px; overflow:hidden;
+  box-shadow:var(--shadow); transition:transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover { transform:translateY(-6px); box-shadow:0 14px 36px rgba(14,165,233,0.18); }
+.project-card .img-wrap {
+  height:220px; overflow:hidden; position:relative;
+  background: linear-gradient(135deg, var(--sky-light) 0%, #bae6fd 100%);
+  display:flex; align-items:center; justify-content:center;
+  font-size:50px; color:var(--sky);
+}
+.project-card .img-wrap img { width:100%; height:100%; object-fit:cover; }
+.project-card .badge {
+  position:absolute; top:12px; left:12px;
+  background:var(--sky); color:#fff;
+  font-size:11px; font-weight:700; font-family:'Montserrat',sans-serif;
+  padding:4px 10px; border-radius:20px;
+  text-transform:uppercase;
+}
+.project-card .card-body { padding:18px; }
+.project-card h3 { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; margin-bottom:6px; color:var(--text); }
+.project-card p { font-size:14px; color:var(--text-light); }
+
+/* ── WHY CHOOSE US ── */
+#why { background:#fff; }
+.why-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap:28px;
+}
+.why-card {
+  background:var(--gray); border-radius:14px; padding:32px 24px;
+  text-align:center; border-top:4px solid var(--red);
+  transition:transform 0.2s;
+}
+.why-card:hover { transform:translateY(-5px); }
+.why-card .icon { font-size:40px; margin-bottom:14px; }
+.why-card h3 { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; color:var(--red); margin-bottom:8px; }
+.why-card p { font-size:14px; color:var(--text-light); line-height:1.7; }
+
+/* ── CONTACT ── */
+#contact { background:var(--gray); }
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:start;
+}
+@media(max-width:768px){ .contact-grid{grid-template-columns:1fr;} }
+.contact-info h3 {
+  font-family:'Montserrat',sans-serif;
+  font-size:22px; font-weight:800; color:var(--sky-dark); margin-bottom:20px;
+}
+.info-row {
+  display:flex; align-items:center; gap:14px;
+  background:#fff; border-radius:12px; padding:16px 18px;
+  margin-bottom:14px; box-shadow:var(--shadow);
+  text-decoration:none; color:var(--text);
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.info-row:hover { transform:translateX(4px); box-shadow:0 6px 20px rgba(14,165,233,0.15); }
+.info-icon {
+  width:44px; height:44px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:18px; flex-shrink:0; color:#fff;
+}
+.info-icon.phone { background:#16a34a; }
+.info-icon.email { background:var(--sky); }
+.info-icon.whatsapp { background:#25D366; }
+.info-icon.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+.info-icon.facebook { background:#1877F2; }
+.info-icon.youtube { background:#FF0000; }
+.info-icon.location { background:var(--red); }
+.info-text strong { display:block; font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:var(--text-light); text-transform:uppercase; letter-spacing:0.5px; }
+.info-text span { font-size:15px; font-weight:600; }
+
+.contact-form-box {
+  background:#fff; border-radius:16px; padding:36px;
+  box-shadow:var(--shadow);
+}
+.contact-form-box h3 {
+  font-family:'Montserrat',sans-serif;
+  font-size:20px; font-weight:800; color:var(--red); margin-bottom:20px;
+}
+.form-group { margin-bottom:16px; }
+.form-group input, .form-group textarea {
+  width:100%; padding:13px 16px;
+  border:2px solid #e2e8f0; border-radius:10px;
+  font-family:'Open Sans',sans-serif; font-size:14px;
+  color:var(--text); transition:border 0.2s;
+  background:#f8fafc;
+}
+.form-group input:focus, .form-group textarea:focus {
+  outline:none; border-color:var(--sky); background:#fff;
+}
+.form-group textarea { height:120px; resize:vertical; }
+.submit-btn {
+  width:100%; padding:15px;
+  background: linear-gradient(135deg, var(--sky), var(--sky-dark));
+  color:#fff; border:none; border-radius:10px;
+  font-family:'Montserrat',sans-serif; font-weight:700;
+  font-size:16px; cursor:pointer;
+  transition:transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(14,165,233,0.3);
+}
+.submit-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(14,165,233,0.4); }
+
+/* ── MAP ── */
+.map-section { background:#fff; padding:0 20px 60px; }
+.map-section iframe {
+  width:100%; height:380px; border:0; border-radius:16px;
+  box-shadow:var(--shadow);
+  display:block; max-width:1100px; margin:0 auto;
 }
 
-/* HEADER */
-
-header{
-background:#c8102e; /* Red */
-color:white;
-text-align:center;
-padding:50px 20px;
+/* ── FOOTER ── */
+footer {
+  background: linear-gradient(135deg, var(--sky-dark) 0%, var(--sky) 100%);
+  color:#fff;
+}
+.footer-main {
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:36px; padding:50px 20px 36px;
+}
+.footer-brand img { width:70px; margin-bottom:12px; border-radius:8px; }
+.footer-brand h3 { font-family:'Montserrat',sans-serif; font-size:18px; font-weight:800; margin-bottom:8px; }
+.footer-brand p { font-size:13px; opacity:0.85; line-height:1.8; }
+.footer-section h4 {
+  font-family:'Montserrat',sans-serif; font-size:14px;
+  font-weight:700; text-transform:uppercase;
+  letter-spacing:1px; margin-bottom:16px;
+  padding-bottom:8px; border-bottom:2px solid rgba(255,255,255,0.25);
+}
+.footer-section a {
+  display:block; color:rgba(255,255,255,0.85); text-decoration:none;
+  font-size:14px; margin-bottom:8px; transition:color 0.2s;
+}
+.footer-section a:hover { color:#fff; }
+.social-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
+.social-icon {
+  width:40px; height:40px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none; font-size:18px; color:#fff;
+  transition:transform 0.2s, opacity 0.2s;
+}
+.social-icon:hover { transform:scale(1.15); opacity:0.85; }
+.si-wa { background:#25D366; }
+.si-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+.si-fb { background:#1877F2; }
+.si-yt { background:#FF0000; }
+.si-mail { background:var(--red); }
+.si-call { background:#16a34a; }
+.footer-bottom {
+  background:rgba(0,0,0,0.15);
+  text-align:center; padding:16px 20px;
+  font-size:13px; opacity:0.9;
 }
 
-header img{
-width:170px;
-margin-bottom:15px;
+/* ── FLOATING WHATSAPP ── */
+.whatsapp-float {
+  position:fixed; bottom:24px; right:24px;
+  background:#25D366; color:#fff;
+  width:58px; height:58px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:28px; text-decoration:none;
+  box-shadow:0 4px 20px rgba(37,211,102,0.5);
+  z-index:999; animation:pulse-wa 2s infinite;
+}
+@keyframes pulse-wa {
+  0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.5);}
+  50%{box-shadow:0 4px 30px rgba(37,211,102,0.85);}
 }
 
-/* NAV */
-
-nav{
-background:#c8102e; /* Red */
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
+/* ── CALL TO ACTION BANNER ── */
+.cta-banner {
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+  padding:50px 20px; text-align:center; color:#fff;
 }
-
-nav a{
-color:white;
-text-decoration:none;
-padding:14px 20px;
-font-weight:bold;
+.cta-banner h2 { font-family:'Montserrat',sans-serif; font-size:30px; font-weight:800; margin-bottom:10px; }
+.cta-banner p { font-size:16px; opacity:0.9; margin-bottom:28px; }
+.cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.cta-btn {
+  padding:15px 32px; border-radius:50px;
+  font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px;
+  text-decoration:none; transition:transform 0.2s, box-shadow 0.2s;
+  display:inline-flex; align-items:center; gap:8px;
 }
+.cta-btn.white { background:#fff; color:var(--red); }
+.cta-btn.outline { background:transparent; border:2px solid #fff; color:#fff; }
+.cta-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
 
-nav a:hover{
-background:#fdb813; /* Yellow hover */
-color:#c8102e;
+@media(max-width:600px){
+  header { padding:14px 16px; }
+  .logo-text h1 { font-size:16px; }
+  .hero { height:340px; }
+  nav a { padding:12px 14px; font-size:12px; }
 }
-
-/* SECTIONS */
-
-section{
-padding:70px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-h2{
-margin-bottom:25px;
-border-bottom:3px solid #fdb813; /* Yellow */
-display:inline-block;
-padding-bottom:5px;
-color:#c8102e; /* Red heading */
-}
-
-/* SERVICES */
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-}
-
-.service{
-background:#ffffff; /* White cards */
-padding:18px;
-border-radius:10px;
-text-align:center;
-font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* PROJECTS */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.project{
-background:#ffffff; /* White */
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.project img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.project-content{
-padding:15px;
-}
-
-/* CONTACT */
-
-.contact{
-text-align:center;
-}
-
-.contact a{
-display:inline-block;
-padding:14px 20px;
-margin:10px;
-border-radius:8px;
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-.call-btn{
-background:#007a33; /* Green */
-}
-
-.email-btn{
-background:#fdb813; /* Yellow */
-color:#c8102e; /* Red text */
-}
-
-.whatsapp-btn{
-background:#25D366; /* Green WhatsApp */
-}
-
-.instagram-btn{
-background:#E1306C; /* Instagram pink stays */
-}
-
-.maps-btn{
-background:#c8102e; /* Red */
-}
-
-/* ADDRESS */
-
-.address{
-font-size:20px;
-font-weight:bold;
-margin-top:10px;
-}
-
-/* MAP */
-
-iframe{
-width:100%;
-height:350px;
-border:0;
-border-radius:10px;
-margin-top:20px;
-}
-
-/* FLOATING WHATSAPP */
-
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:16px 18px;
-border-radius:50px;
-text-decoration:none;
-font-size:20px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* FOOTER */
-
-footer{
-background:#c8102e; /* Red */
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
-
 </style>
 </head>
-
 <body>
 
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="left">
+    <i class="fa-solid fa-envelope"></i>
+    <span>tinshade.noida@gmail.com</span>
+  </div>
+  <div>
+    <a href="tel:+918527977714"><i class="fa-solid fa-phone"></i> +91-8527977714</a>
+    <a href="https://wa.me/918527977714"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  </div>
+</div>
+
+<!-- HEADER -->
 <header>
-
-<img src="images/logo.png">
-
-<h1>Tin Shade Shelter Solutions</h1>
-
-<p>Professional Tin Shed, MS Structure & Warehouse Roofing</p>
-
+  <div class="logo-area">
+    <img src="images/logo.png" alt="Tin Shade Noida Logo" onerror="this.style.display='none'">
+    <div class="logo-text">
+      <h1>Tin Shade Noida</h1>
+      <p>Professional Tin Shed & MS Structure</p>
+    </div>
+  </div>
 </header>
 
+<!-- NAV -->
 <nav>
-
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#why">Why Us</a>
+  <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO SLIDER -->
+<div class="hero">
+  <div class="slides" id="slides">
+    <div class="slide">
+      <div class="slide-bg"></div>
+      <div class="slide-pattern"></div>
+      <div class="slide-content">
+        <h2>Professional Tin Shed Solutions</h2>
+        <p>Trusted Manufacturer of Industrial & Warehouse Roofing in Noida</p>
+        <a href="#contact" class="slide-btn">Get Free Quote</a>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-bg"></div>
+      <div class="slide-pattern"></div>
+      <div class="slide-content">
+        <h2>MS Structure Fabrication</h2>
+        <p>Heavy Duty Steel Framework for Factories, Warehouses & Parking Sheds</p>
+        <a href="#services" class="slide-btn">Our Services</a>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-bg"></div>
+      <div class="slide-pattern"></div>
+      <div class="slide-content">
+        <h2>Industrial Platform Making</h2>
+        <p>Complete Shed & Roofing Solutions across Noida, Greater Noida & NCR</p>
+        <a href="#projects" class="slide-btn">View Projects</a>
+      </div>
+    </div>
+  </div>
+  <button class="hero-prev" onclick="moveSlide(-1)">&#8249;</button>
+  <button class="hero-next" onclick="moveSlide(1)">&#8250;</button>
+  <div class="hero-dots" id="dots">
+    <span class="active"></span><span></span><span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-title">
+      <div class="title-line"></div>
+      <h2>Welcome to <span>Tin Shade Noida</span></h2>
+      <p>Your trusted partner for all tin shed and MS structure solutions</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-img">
+        <div class="about-img-placeholder">
+          <i class="fa-solid fa-warehouse"></i>
+          <p>About Image</p>
+        </div>
+      </div>
+      <div class="about-text">
+        <h3>Tin Shade Shelter Solutions</h3>
+        <p>Tin Shade Noida is a leading manufacturer and installer of tin sheds, MS structures, and industrial roofing solutions. We have been serving clients across Noida, Greater Noida, and the entire NCR region.</p>
+        <p>We specialize in factory sheds, warehouse roofing, parking sheds, and heavy-duty MS fabrication work. Our team of experienced professionals ensures every project is delivered on time with the highest quality standards.</p>
+        <div class="about-stats">
+          <div class="stat"><h4>500+</h4><p>Projects Done</p></div>
+          <div class="stat"><h4>10+</h4><p>Years Experience</p></div>
+          <div class="stat"><h4>100%</h4><p>Satisfaction</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
 <section id="services">
-
-<h2>Our Services</h2>
-
-<div class="services">
-
-<div class="service">Tin Shade Noida</div>
-<div class="service">Warehouse Tin Shed</div>
-<div class="service">Factory Shed Work</div>
-<div class="service">MS Structure Fabrication</div>
-<div class="service">Industrial Platform Making</div>
-<div class="service">Parking Shed</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2>Recent Projects</h2>
-
-<div class="projects">
-
-<div class="project">
-<img src="images/project1.jpg">
-<div class="project-content">
-<h3>MS Structure Work</h3>
-<p>Steel framework fabrication for industrial roofing.</p>
-</div>
-</div>
-
-<div class="project">
-<img src="images/project2.jpg">
-<div class="project-content">
-<h3>Tin Shed Installation</h3>
-<p>Durable tin shed structure for factory area.</p>
-</div>
-</div>
-
-<div class="project">
-<img src="images/project3.jpg">
-<div class="project-content">
-<h3>Warehouse Roofing</h3>
-<p>Large warehouse roofing installation.</p>
-</div>
-</div>
-
-<div class="project">
-<img src="images/project4.jpg">
-<div class="project-content">
-<h3>Industrial Platform</h3>
-<p>Metal platform fabrication and installation.</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="contact">
-
-<p class="address">📍 D179 Sector 10 Noida, India</p>
-
-<p>📞 Phone: 8527977714</p>
-
-<p>📧 Email: tinshade.noida@gmail.com</p>
-
-<a class="call-btn" href="tel:+918527977714">
-<i class="fa-solid fa-phone"></i> Call Now
-</a>
-
-<a class="email-btn" href="mailto:tinshade.noida@gmail.com">
-<i class="fa-solid fa-envelope"></i> Email
-</a>
-
-<a class="whatsapp-btn" href="https://wa.me/918527977714">
-<i class="fa-brands fa-whatsapp"></i> WhatsApp
-</a>
-
-<a class="instagram-btn" href="https://www.instagram.com/tin_shade_wearhouse">
-<i class="fa-brands fa-instagram"></i> Instagram
-</a>
-
-<a class="maps-btn" href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7">
-<i class="fa-solid fa-location-dot"></i> Open Location
-</a>
-
-</div>
-
-<iframe src="https://www.google.com/maps?q=D179%20Sector%2010%20Noida&output=embed"></iframe>
-
-</section>
-
-<footer>
-
-<p>© 2026 Tin Shade Noida</p>
-
-</footer>
-
-<a class="whatsapp-float" href="https://wa.me/918527977714">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-</body>
-  </html>
+  <div class="section-inner">
+    <div class="section-title">
+      <div class="title-line"></div>
+      <h2>Our <span>Services</span></h2>
+      <p>Complete shed and roofing solutions for every requirement</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
+        <h3>Tin Shade Noida</h3>
+      </div>
+      <div class="service-card">
+  
