@@ -3,544 +3,255 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tin Shade Noida – Professional Tin Shed & MS Structure</title>
+<title>Tin Shade Noida | Professional Tin Shed & MS Structure Manufacturer</title>
+<meta name="description" content="Tin Shade Noida – Leading manufacturer of tin sheds, MS structures, warehouse roofing & industrial sheds across Noida, Greater Noida & NCR. Call +91-8527977714">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root {
-  --sky: #0ea5e9;
-  --sky-dark: #0284c7;
-  --sky-light: #e0f2fe;
-  --red: #c8102e;
-  --red-dark: #a00d24;
-  --white: #ffffff;
-  --gray: #f8fafc;
-  --text: #1e293b;
-  --text-light: #64748b;
-  --shadow: 0 4px 24px rgba(14,165,233,0.10);
-  --shadow-red: 0 4px 24px rgba(200,16,46,0.12);
+  --sky:#0ea5e9; --sky-dark:#0284c7; --sky-light:#e0f2fe;
+  --red:#c8102e; --red-dark:#a00d24;
+  --white:#ffffff; --off:#f8fafc; --dark:#0f172a;
+  --text:#1e293b; --muted:#64748b;
+  --shadow:0 4px 24px rgba(14,165,233,.10);
+  --radius:14px;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-body { font-family:'Open Sans', sans-serif; color:var(--text); background:var(--white); }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;overflow-x:hidden;}
 
-/* ── TOP BAR ── */
-.topbar {
-  background: var(--red);
-  color: #fff;
-  padding: 8px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.topbar a { color:#fff; text-decoration:none; margin-left:18px; }
-.topbar a:hover { text-decoration:underline; }
-.topbar .left { display:flex; align-items:center; gap:5px; }
+/* ── TOPBAR ── */
+.topbar{background:var(--dark);color:#cbd5e1;padding:9px 40px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;flex-wrap:wrap;gap:6px;}
+.topbar a{color:#94a3b8;text-decoration:none;margin-left:20px;transition:color .2s;}
+.topbar a:hover{color:#fff;}
+.topbar .tb-left{display:flex;align-items:center;gap:18px;}
+.topbar .tb-left span{display:flex;align-items:center;gap:6px;}
+.topbar .tb-left i{color:var(--sky);}
 
 /* ── HEADER ── */
-header {
-  background: var(--white);
-  padding: 16px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.logo-area { display:flex; align-items:center; gap:16px; }
-.logo-area img { width:80px; height:80px; object-fit:contain; border-radius:8px; }
-.logo-text h1 { font-family:'Montserrat', sans-serif; font-size:22px; font-weight:800; color:var(--red); line-height:1.2; }
-.logo-text p { font-size:12px; color:var(--sky-dark); font-weight:600; text-transform:uppercase; letter-spacing:1px; }
+header{background:#fff;padding:0 40px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 16px rgba(0,0,0,.07);position:sticky;top:0;z-index:1000;height:80px;flex-wrap:wrap;gap:10px;}
+.logo-area{display:flex;align-items:center;gap:14px;}
+.logo-area img{width:64px;height:64px;object-fit:contain;border-radius:8px;}
+.logo-text h1{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;color:var(--red);letter-spacing:.5px;line-height:1.1;}
+.logo-text p{font-size:11px;color:var(--sky-dark);font-weight:600;text-transform:uppercase;letter-spacing:1.5px;}
+.header-cta{display:flex;gap:10px;align-items:center;}
+.header-cta a{padding:10px 20px;border-radius:50px;font-weight:600;font-size:13px;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:7px;}
+.btn-call{background:var(--red);color:#fff;box-shadow:0 3px 12px rgba(200,16,46,.3);}
+.btn-call:hover{background:var(--red-dark);transform:translateY(-1px);}
+.btn-wa{background:#25D366;color:#fff;box-shadow:0 3px 12px rgba(37,211,102,.3);}
+.btn-wa:hover{background:#1da851;transform:translateY(-1px);}
 
 /* ── NAV ── */
-nav {
-  background: var(--sky);
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 15px 24px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  transition: background 0.2s;
-  text-transform: uppercase;
-}
-nav a:hover { background: var(--sky-dark); }
+nav{background:var(--sky);display:flex;justify-content:center;flex-wrap:wrap;}
+nav a{color:#fff;text-decoration:none;padding:14px 22px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.8px;text-transform:uppercase;transition:background .2s,color .2s;position:relative;}
+nav a::after{content:'';position:absolute;bottom:0;left:50%;right:50%;height:3px;background:#fff;transition:left .2s,right .2s;}
+nav a:hover{background:var(--sky-dark);}
+nav a:hover::after{left:0;right:0;}
 
 /* ── HERO SLIDER ── */
-.hero {
-  position: relative;
-  overflow: hidden;
-  height: 480px;
-  background: var(--sky-dark);
-}
-.slides { display:flex; height:100%; transition: transform 0.6s cubic-bezier(.4,0,.2,1); }
-.slide {
-  min-width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-.slide-img {
-  position: absolute; inset:0;
-  width:100%; height:100%;
-  object-fit: cover;
-  object-position: center;
-}
-.slide-overlay {
-  position: relative;
-  z-index: 2;
-  padding: 24px;
-  width:100%;
-  text-align: center;
-  background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 100%);
-}
-.slide-btn {
-  background: #fff;
-  color: var(--sky-dark);
-  padding: 14px 36px;
-  border-radius: 50px;
-  font-family:'Montserrat',sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-.slide-btn:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,0,0,0.3); }
-.hero-prev, .hero-next {
-  position: absolute; top:50%; transform:translateY(-50%);
-  background: rgba(255,255,255,0.25); border:none; color:#fff;
-  width:48px; height:48px; border-radius:50%; font-size:20px;
-  cursor:pointer; z-index:10; transition:background 0.2s; backdrop-filter:blur(4px);
-}
-.hero-prev { left:20px; }
-.hero-next { right:20px; }
-.hero-prev:hover, .hero-next:hover { background: rgba(255,255,255,0.45); }
-.hero-dots { position:absolute; bottom:18px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:10; }
-.hero-dots span {
-  width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.5); cursor:pointer; transition:background 0.2s;
-}
-.hero-dots span.active { background:#fff; }
+.hero{position:relative;overflow:hidden;height:500px;}
+.slides{display:flex;height:100%;transition:transform .65s cubic-bezier(.4,0,.2,1);}
+.slide{min-width:100%;height:100%;position:relative;display:flex;align-items:flex-end;justify-content:center;}
+.slide-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.1) 60%,transparent 100%);}
+.slide-content{position:relative;z-index:2;padding:36px 40px;width:100%;text-align:left;max-width:1100px;margin:0 auto;}
+.slide-tag{display:inline-block;background:var(--sky);color:#fff;font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;}
+.slide-content h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,5vw,58px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:10px;text-shadow:0 2px 12px rgba(0,0,0,.3);}
+.slide-content p{color:rgba(255,255,255,.88);font-size:16px;margin-bottom:22px;max-width:480px;}
+.slide-btn{background:#fff;color:var(--sky-dark);padding:13px 30px;border-radius:50px;font-weight:700;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s,box-shadow .2s;}
+.slide-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.25);}
+.hero-prev,.hero-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);color:#fff;width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer;z-index:10;backdrop-filter:blur(6px);transition:background .2s;}
+.hero-prev{left:20px;} .hero-next{right:20px;}
+.hero-prev:hover,.hero-next:hover{background:rgba(255,255,255,.35);}
+.hero-dots{position:absolute;bottom:20px;right:40px;display:flex;gap:8px;z-index:10;}
+.hero-dots span{width:28px;height:4px;border-radius:2px;background:rgba(255,255,255,.45);cursor:pointer;transition:all .3s;}
+.hero-dots span.active{background:#fff;width:40px;}
 
 /* ── SECTION BASE ── */
-section { padding: 70px 20px; }
-.section-inner { max-width:1100px; margin:auto; }
-.section-title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.section-title h2 {
-  font-family:'Montserrat',sans-serif;
-  font-size: 34px;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-.section-title h2 span { color: var(--sky); }
-.title-line {
-  width: 60px; height: 4px;
-  background: linear-gradient(90deg, var(--sky), var(--red));
-  border-radius: 2px;
-  margin: 0 auto 12px;
-}
-.section-title p { color:var(--text-light); font-size:16px; }
+.section{padding:80px 20px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky);margin-bottom:8px;}
+.section-title h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:800;color:var(--dark);margin-bottom:10px;line-height:1.15;}
+.section-title h2 em{font-style:normal;color:var(--sky);}
+.section-title p{color:var(--muted);font-size:15px;max-width:560px;}
+.section-title.center{text-align:center;}
+.section-title.center p{margin:0 auto;}
+.title-bar{width:48px;height:4px;background:linear-gradient(90deg,var(--sky),var(--red));border-radius:2px;margin-bottom:20px;}
+.section-title.center .title-bar{margin:0 auto 20px;}
 
 /* ── ABOUT ── */
-#about { background: var(--gray); }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-@media(max-width:768px){ .about-grid { grid-template-columns:1fr; } }
-.about-img img {
-  width:100%; border-radius:16px;
-  box-shadow: var(--shadow);
-  object-fit:cover;
-  height:360px;
-}
-.about-img-placeholder {
-  width:100%; border-radius:16px;
-  height:360px;
-  background: linear-gradient(135deg, var(--sky-light) 0%, #bae6fd 100%);
-  display:flex; align-items:center; justify-content:center;
-  flex-direction:column; gap:12px;
-  color: var(--sky-dark);
-  font-size:60px;
-  box-shadow: var(--shadow);
-}
-.about-img-placeholder p { font-size:14px; font-family:'Montserrat',sans-serif; font-weight:600; }
-.about-text h3 {
-  font-family:'Montserrat',sans-serif;
-  font-size:28px; font-weight:800; color:var(--red); margin-bottom:16px;
-}
-.about-text p { color:var(--text-light); line-height:1.9; margin-bottom:16px; font-size:15px; }
-.about-stats { display:flex; gap:24px; margin-top:24px; flex-wrap:wrap; }
-.stat {
-  background:#fff; border-radius:12px; padding:18px 24px;
-  text-align:center; box-shadow:var(--shadow);
-  border-top:3px solid var(--sky);
-  flex:1; min-width:100px;
-}
-.stat h4 { font-family:'Montserrat',sans-serif; font-size:28px; font-weight:800; color:var(--sky); }
-.stat p { font-size:12px; color:var(--text-light); font-weight:600; text-transform:uppercase; margin-top:4px; }
+.about-section{background:var(--off);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;}}
+.about-img-wrap{position:relative;}
+.about-img-wrap img{width:100%;height:400px;object-fit:cover;border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,.12);}
+.about-badge{position:absolute;bottom:-20px;right:-16px;background:var(--red);color:#fff;border-radius:16px;padding:18px 22px;text-align:center;box-shadow:0 8px 24px rgba(200,16,46,.3);}
+.about-badge h3{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:800;line-height:1;}
+.about-badge p{font-size:11px;opacity:.85;text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+.about-text p{color:var(--muted);line-height:1.85;font-size:15px;margin-bottom:16px;}
+.about-list{list-style:none;margin:24px 0;}
+.about-list li{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--text);margin-bottom:10px;}
+.about-list li i{color:var(--sky);font-size:16px;}
+.stats-row{display:flex;gap:20px;margin-top:28px;flex-wrap:wrap;}
+.stat-box{background:#fff;border-radius:12px;padding:16px 20px;text-align:center;box-shadow:var(--shadow);border-top:3px solid var(--sky);flex:1;min-width:90px;}
+.stat-box h4{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:800;color:var(--sky);}
+.stat-box p{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;margin-top:2px;}
 
 /* ── SERVICES ── */
-#services { background:#fff; }
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 24px;
-}
-.service-card {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 32px 20px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  border-bottom: 4px solid var(--sky);
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-}
-.service-card:hover { transform:translateY(-6px); box-shadow:0 12px 32px rgba(14,165,233,0.18); border-color:var(--red); }
-.service-card .icon {
-  width:64px; height:64px; border-radius:50%;
-  background: linear-gradient(135deg, var(--sky-light), #bae6fd);
-  display:flex; align-items:center; justify-content:center;
-  margin:0 auto 16px;
-  font-size:26px; color:var(--sky-dark);
-}
-.service-card h3 {
-  font-family:'Montserrat',sans-serif;
-  font-size:15px; font-weight:700; color:var(--text);
-}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px;margin-top:40px;}
+.service-card{background:#fff;border-radius:var(--radius);padding:30px 18px;text-align:center;box-shadow:var(--shadow);border-bottom:4px solid transparent;transition:transform .25s,box-shadow .25s,border-color .25s;cursor:default;}
+.service-card:hover{transform:translateY(-7px);box-shadow:0 16px 40px rgba(14,165,233,.15);border-color:var(--sky);}
+.service-icon{width:66px;height:66px;border-radius:50%;background:var(--sky-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;color:var(--sky-dark);transition:background .25s;}
+.service-card:hover .service-icon{background:var(--sky);color:#fff;}
+.service-card h3{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:var(--dark);letter-spacing:.3px;}
+.service-card p{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.6;}
 
 /* ── PROJECTS ── */
-#projects { background:var(--gray); }
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 28px;
-}
-.project-card {
-  background:#fff; border-radius:14px; overflow:hidden;
-  box-shadow:var(--shadow); transition:transform 0.2s, box-shadow 0.2s;
-}
-.project-card:hover { transform:translateY(-6px); box-shadow:0 14px 36px rgba(14,165,233,0.18); }
-.project-card .img-wrap {
-  height:220px; overflow:hidden; position:relative;
-  background: linear-gradient(135deg, var(--sky-light) 0%, #bae6fd 100%);
-  display:flex; align-items:center; justify-content:center;
-  font-size:50px; color:var(--sky);
-}
-.project-card .img-wrap img { width:100%; height:100%; object-fit:cover; }
-.project-card .badge {
-  position:absolute; top:12px; left:12px;
-  background:var(--sky); color:#fff;
-  font-size:11px; font-weight:700; font-family:'Montserrat',sans-serif;
-  padding:4px 10px; border-radius:20px;
-  text-transform:uppercase;
-}
-.project-card .card-body { padding:18px; }
-.project-card h3 { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; margin-bottom:6px; color:var(--text); }
-.project-card p { font-size:14px; color:var(--text-light); }
+.projects-section{background:var(--off);}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;margin-top:40px;}
+.project-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:transform .25s,box-shadow .25s;}
+.project-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(14,165,233,.18);}
+.project-img{height:230px;overflow:hidden;position:relative;}
+.project-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.project-card:hover .project-img img{transform:scale(1.06);}
+.project-badge{position:absolute;top:12px;left:12px;background:var(--sky);color:#fff;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px;}
+.zoom-btn{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.9);color:var(--sky-dark);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;opacity:0;transition:opacity .2s;}
+.project-card:hover .zoom-btn{opacity:1;}
+.project-body{padding:18px;}
+.project-body h3{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:700;color:var(--dark);margin-bottom:5px;}
+.project-body p{font-size:13px;color:var(--muted);}
 
 /* ── WHY CHOOSE US ── */
-#why { background:#fff; }
-.why-grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap:28px;
-}
-.why-card {
-  background:var(--gray); border-radius:14px; padding:32px 24px;
-  text-align:center; border-top:4px solid var(--red);
-  transition:transform 0.2s;
-}
-.why-card:hover { transform:translateY(-5px); }
-.why-card .icon { font-size:40px; margin-bottom:14px; }
-.why-card h3 { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; color:var(--red); margin-bottom:8px; }
-.why-card p { font-size:14px; color:var(--text-light); line-height:1.7; }
-
-/* ── CONTACT ── */
-#contact { background:var(--gray); }
-.contact-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:start;
-}
-@media(max-width:768px){ .contact-grid{grid-template-columns:1fr;} }
-.contact-info h3 {
-  font-family:'Montserrat',sans-serif;
-  font-size:22px; font-weight:800; color:var(--sky-dark); margin-bottom:20px;
-}
-.info-row {
-  display:flex; align-items:center; gap:14px;
-  background:#fff; border-radius:12px; padding:16px 18px;
-  margin-bottom:14px; box-shadow:var(--shadow);
-  text-decoration:none; color:var(--text);
-  transition:transform 0.2s, box-shadow 0.2s;
-}
-.info-row:hover { transform:translateX(4px); box-shadow:0 6px 20px rgba(14,165,233,0.15); }
-.info-icon {
-  width:44px; height:44px; border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  font-size:18px; flex-shrink:0; color:#fff;
-}
-.info-icon.phone { background:#16a34a; }
-.info-icon.email { background:var(--sky); }
-.info-icon.whatsapp { background:#25D366; }
-.info-icon.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
-.info-icon.facebook { background:#1877F2; }
-.info-icon.youtube { background:#FF0000; }
-.info-icon.location { background:var(--red); }
-.info-text strong { display:block; font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:var(--text-light); text-transform:uppercase; letter-spacing:0.5px; }
-.info-text span { font-size:15px; font-weight:600; }
-
-.contact-form-box {
-  background:#fff; border-radius:16px; padding:36px;
-  box-shadow:var(--shadow);
-}
-.contact-form-box h3 {
-  font-family:'Montserrat',sans-serif;
-  font-size:20px; font-weight:800; color:var(--red); margin-bottom:20px;
-}
-.form-group { margin-bottom:16px; }
-.form-group input, .form-group textarea {
-  width:100%; padding:13px 16px;
-  border:2px solid #e2e8f0; border-radius:10px;
-  font-family:'Open Sans',sans-serif; font-size:14px;
-  color:var(--text); transition:border 0.2s;
-  background:#f8fafc;
-}
-.form-group input:focus, .form-group textarea:focus {
-  outline:none; border-color:var(--sky); background:#fff;
-}
-.form-group textarea { height:120px; resize:vertical; }
-.submit-btn {
-  width:100%; padding:15px;
-  background: linear-gradient(135deg, var(--sky), var(--sky-dark));
-  color:#fff; border:none; border-radius:10px;
-  font-family:'Montserrat',sans-serif; font-weight:700;
-  font-size:16px; cursor:pointer;
-  transition:transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 16px rgba(14,165,233,0.3);
-}
-.submit-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(14,165,233,0.4); }
-
-/* ── MAP ── */
-.map-section { background:#fff; padding:0 20px 60px; }
-.map-section iframe {
-  width:100%; height:380px; border:0; border-radius:16px;
-  box-shadow:var(--shadow);
-  display:block; max-width:1100px; margin:0 auto;
-}
-
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-top:40px;}
+.why-card{background:var(--off);border-radius:var(--radius);padding:32px 24px;border-top:4px solid var(--red);transition:transform .2s,box-shadow .2s;}
+.why-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+.why-icon{font-size:36px;margin-bottom:14px;}
+.why-card h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:var(--red);margin-bottom:8px;}
+.why-card p{font-size:13.5px;color:var(--muted);line-height:1.75;}
 
 /* ── GALLERY ── */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 20px;
-}
-.gallery-item {
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  aspect-ratio: 4/3;
-}
-.gallery-item img {
-  width:100%; height:100%;
-  object-fit: cover;
-  transition: transform 0.35s;
-  display: block;
-}
-.gallery-item:hover img { transform: scale(1.06); }
-.gallery-overlay {
-  position: absolute; inset:0;
-  background: rgba(14,165,233,0.0);
-  display: flex; align-items:center; justify-content:center;
-  font-size: 30px; color: #fff;
-  transition: background 0.3s;
-  opacity: 0;
-}
-.gallery-item:hover .gallery-overlay { background: rgba(14,165,233,0.45); opacity:1; }
+.gallery-section{background:var(--off);}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:40px;}
+.gallery-item{border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer;aspect-ratio:4/3;box-shadow:var(--shadow);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.gallery-item:hover img{transform:scale(1.07);}
+.gallery-hover{position:absolute;inset:0;background:rgba(14,165,233,0);display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;opacity:0;transition:all .3s;}
+.gallery-item:hover .gallery-hover{background:rgba(14,165,233,.45);opacity:1;}
 
-/* ── PROJECT CARD ZOOM ── */
-.zoom-icon {
-  position: absolute; top:10px; right:10px;
-  background: rgba(255,255,255,0.9);
-  color: var(--sky-dark);
-  width: 36px; height: 36px; border-radius: 50%;
-  display: flex; align-items:center; justify-content:center;
-  font-size: 14px; opacity:0; transition: opacity 0.2s;
-}
-.project-card:hover .zoom-icon { opacity: 1; }
-.project-card { cursor: pointer; }
+/* ── VIDEOS ── */
+.videos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:40px;}
+.video-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:transform .25s,box-shadow .25s;}
+.video-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(14,165,233,.18);}
+.video-thumb{position:relative;padding-bottom:72%;overflow:hidden;}
+.video-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.video-card:hover .video-thumb img{transform:scale(1.06);}
+.video-play{position:absolute;inset:0;background:rgba(0,0,0,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;transition:background .3s;}
+.video-card:hover .video-play{background:rgba(0,0,0,.52);}
+.play-circle{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:transform .2s;}
+.video-card:hover .play-circle{transform:scale(1.1);}
+.video-play span{color:#fff;font-size:12px;font-weight:600;letter-spacing:.5px;}
+.video-label{padding:13px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;color:var(--dark);border-top:3px solid var(--sky);display:flex;align-items:center;gap:7px;}
+.video-label i{color:#E1306C;}
+.videos-cta{text-align:center;margin-top:36px;}
+.ig-btn{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:9px;box-shadow:0 4px 20px rgba(200,50,50,.3);transition:transform .2s,box-shadow .2s;}
+.ig-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,50,50,.4);}
+
+/* ── CTA BANNER ── */
+.cta-banner{background:linear-gradient(135deg,var(--red-dark),var(--red));padding:60px 20px;text-align:center;color:#fff;position:relative;overflow:hidden;}
+.cta-banner::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 0,transparent 50%);background-size:24px 24px;}
+.cta-banner h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,5vw,46px);font-weight:800;margin-bottom:10px;position:relative;}
+.cta-banner p{font-size:16px;opacity:.9;margin-bottom:30px;position:relative;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;}
+.cta-btn{padding:14px 30px;border-radius:50px;font-weight:700;font-size:14px;text-decoration:none;transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:8px;}
+.cta-btn.white{background:#fff;color:var(--red);}
+.cta-btn.outline{background:transparent;border:2px solid rgba(255,255,255,.6);color:#fff;}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+
+/* ── CONTACT ── */
+.contact-section{background:#fff;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;}}
+.contact-info-title{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;color:var(--sky-dark);margin-bottom:22px;}
+.contact-row{display:flex;align-items:center;gap:14px;background:var(--off);border-radius:12px;padding:15px 18px;margin-bottom:12px;text-decoration:none;color:var(--text);transition:transform .2s,box-shadow .2s;border-left:4px solid transparent;}
+.contact-row:hover{transform:translateX(5px);box-shadow:var(--shadow);border-left-color:var(--sky);}
+.contact-icon{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;color:#fff;}
+.ci-phone{background:#16a34a;} .ci-wa{background:#25D366;} .ci-email{background:var(--sky);}
+.ci-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);}
+.ci-fb{background:#1877F2;} .ci-yt{background:#FF0000;} .ci-loc{background:var(--red);}
+.contact-row-text strong{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;}
+.contact-row-text span{font-size:14px;font-weight:600;}
+.contact-form-box{background:var(--off);border-radius:20px;padding:36px;box-shadow:var(--shadow);}
+.contact-form-box h3{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;color:var(--red);margin-bottom:22px;}
+.form-group{margin-bottom:14px;}
+.form-group input,.form-group textarea{width:100%;padding:13px 16px;border:2px solid #e2e8f0;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);background:#fff;transition:border .2s,box-shadow .2s;outline:none;}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(14,165,233,.1);}
+.form-group textarea{height:110px;resize:vertical;}
+.submit-btn{width:100%;padding:15px;background:linear-gradient(135deg,var(--sky),var(--sky-dark));color:#fff;border:none;border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:.5px;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(14,165,233,.3);}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,165,233,.4);}
+.form-msg{display:none;border-radius:10px;padding:14px 16px;text-align:center;font-weight:600;margin-bottom:14px;font-size:14px;}
+.form-msg.success{background:#dcfce7;border:1px solid #16a34a;color:#15803d;}
+.form-msg.error{background:#fee2e2;border:1px solid #dc2626;color:#dc2626;}
+
+/* ── MAP ── */
+.map-section{padding:0 20px 70px;background:#fff;}
+.map-section iframe{width:100%;max-width:1100px;height:380px;border:0;border-radius:20px;box-shadow:var(--shadow);display:block;margin:0 auto;}
 
 /* ── FOOTER ── */
-footer {
-  background: linear-gradient(135deg, var(--sky-dark) 0%, var(--sky) 100%);
-  color:#fff;
-}
-.footer-main {
-  max-width:1100px; margin:0 auto;
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:36px; padding:50px 20px 36px;
-}
-.footer-brand img { width:70px; margin-bottom:12px; border-radius:8px; }
-.footer-brand h3 { font-family:'Montserrat',sans-serif; font-size:18px; font-weight:800; margin-bottom:8px; }
-.footer-brand p { font-size:13px; opacity:0.85; line-height:1.8; }
-.footer-section h4 {
-  font-family:'Montserrat',sans-serif; font-size:14px;
-  font-weight:700; text-transform:uppercase;
-  letter-spacing:1px; margin-bottom:16px;
-  padding-bottom:8px; border-bottom:2px solid rgba(255,255,255,0.25);
-}
-.footer-section a {
-  display:block; color:rgba(255,255,255,0.85); text-decoration:none;
-  font-size:14px; margin-bottom:8px; transition:color 0.2s;
-}
-.footer-section a:hover { color:#fff; }
-.social-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
-.social-icon {
-  width:40px; height:40px; border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  text-decoration:none; font-size:18px; color:#fff;
-  transition:transform 0.2s, opacity 0.2s;
-}
-.social-icon:hover { transform:scale(1.15); opacity:0.85; }
-.si-wa { background:#25D366; }
-.si-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
-.si-fb { background:#1877F2; }
-.si-yt { background:#FF0000; }
-.si-mail { background:var(--red); }
-.si-call { background:#16a34a; }
-.footer-bottom {
-  background:rgba(0,0,0,0.15);
-  text-align:center; padding:16px 20px;
-  font-size:13px; opacity:0.9;
-}
+footer{background:var(--dark);color:#94a3b8;}
+.footer-main{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;padding:56px 20px 40px;}
+.footer-brand h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:10px;}
+.footer-brand p{font-size:13px;line-height:1.8;margin-bottom:18px;}
+.footer-socials{display:flex;gap:10px;flex-wrap:wrap;}
+.fsoc{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;font-size:16px;transition:transform .2s,opacity .2s;}
+.fsoc:hover{transform:scale(1.15);}
+.fsoc-wa{background:#25D366;} .fsoc-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);}
+.fsoc-fb{background:#1877F2;} .fsoc-yt{background:#FF0000;} .fsoc-mail{background:var(--sky);} .fsoc-call{background:#16a34a;}
+.footer-col h4{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid rgba(255,255,255,.08);}
+.footer-col a{display:block;color:#94a3b8;text-decoration:none;font-size:13.5px;margin-bottom:9px;transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-col a i{margin-right:8px;color:var(--sky);font-size:12px;}
+.footer-bottom{background:rgba(0,0,0,.25);text-align:center;padding:16px 20px;font-size:12.5px;color:#64748b;}
 
-/* ── AI CHAT WIDGET ── */
-#ai-chat-btn {
-  position:fixed; bottom:24px; right:24px;
-  background:linear-gradient(135deg,#0ea5e9,#0284c7);
-  color:#fff; width:62px; height:62px; border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  font-size:26px; cursor:pointer; border:none;
-  box-shadow:0 4px 20px rgba(14,165,233,0.5);
-  z-index:999; animation:pulse-ai 2s infinite;
-  transition: transform 0.2s;
-}
-#ai-chat-btn:hover { transform:scale(1.1); }
-@keyframes pulse-ai {
-  0%,100%{box-shadow:0 4px 20px rgba(14,165,233,0.5);}
-  50%{box-shadow:0 4px 30px rgba(14,165,233,0.85);}
-}
-#ai-chat-box {
-  position:fixed; bottom:100px; right:24px;
-  width:340px; max-height:520px;
-  background:#fff; border-radius:20px;
-  box-shadow:0 8px 40px rgba(0,0,0,0.18);
-  display:none; flex-direction:column;
-  z-index:998; overflow:hidden;
-  font-family:'Open Sans',sans-serif;
-}
-#ai-chat-box.open { display:flex; }
-.chat-header {
-  background:linear-gradient(135deg,#0ea5e9,#0284c7);
-  color:#fff; padding:16px 18px;
-  display:flex; align-items:center; gap:12px;
-}
-.chat-header-avatar {
-  width:40px; height:40px; border-radius:50%;
-  background:rgba(255,255,255,0.25);
-  display:flex; align-items:center; justify-content:center;
-  font-size:20px;
-}
-.chat-header-info h4 { font-size:15px; font-weight:700; margin-bottom:2px; }
-.chat-header-info p { font-size:11px; opacity:0.85; }
-.chat-header-close {
-  margin-left:auto; background:none; border:none;
-  color:#fff; font-size:20px; cursor:pointer; opacity:0.8;
-}
-.chat-header-close:hover { opacity:1; }
-#chat-messages {
-  flex:1; overflow-y:auto; padding:16px;
-  display:flex; flex-direction:column; gap:10px;
-  max-height:340px;
-}
-.msg { max-width:85%; padding:10px 14px; border-radius:16px; font-size:13.5px; line-height:1.6; }
-.msg.bot { background:#f0f9ff; color:#1e293b; border-bottom-left-radius:4px; align-self:flex-start; }
-.msg.user { background:linear-gradient(135deg,#0ea5e9,#0284c7); color:#fff; border-bottom-right-radius:4px; align-self:flex-end; }
-.msg.typing { background:#f0f9ff; color:#94a3b8; font-style:italic; align-self:flex-start; }
-.chat-input-area {
-  padding:12px; border-top:1px solid #e2e8f0;
-  display:flex; gap:8px; align-items:center;
-}
-#chat-input {
-  flex:1; border:2px solid #e2e8f0; border-radius:24px;
-  padding:10px 16px; font-size:13px; outline:none;
-  font-family:'Open Sans',sans-serif;
-  transition:border 0.2s;
-}
-#chat-input:focus { border-color:#0ea5e9; }
-#chat-send {
-  background:linear-gradient(135deg,#0ea5e9,#0284c7);
-  color:#fff; border:none; width:40px; height:40px;
-  border-radius:50%; cursor:pointer; font-size:15px;
-  display:flex; align-items:center; justify-content:center;
-  transition:transform 0.2s;
-}
-#chat-send:hover { transform:scale(1.1); }
+/* ── AI CHAT ── */
+#ai-chat-btn{position:fixed;bottom:26px;right:26px;background:linear-gradient(135deg,var(--sky),var(--sky-dark));color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;border:none;box-shadow:0 4px 20px rgba(14,165,233,.5);z-index:999;animation:pulse-ai 2.5s infinite;transition:transform .2s;}
+#ai-chat-btn:hover{transform:scale(1.1);}
+@keyframes pulse-ai{0%,100%{box-shadow:0 4px 20px rgba(14,165,233,.5);}50%{box-shadow:0 4px 32px rgba(14,165,233,.85);}}
+#ai-chat-box{position:fixed;bottom:100px;right:26px;width:330px;max-height:510px;background:#fff;border-radius:20px;box-shadow:0 12px 50px rgba(0,0,0,.18);display:none;flex-direction:column;z-index:998;overflow:hidden;font-family:'DM Sans',sans-serif;}
+#ai-chat-box.open{display:flex;}
+.chat-hdr{background:linear-gradient(135deg,var(--sky),var(--sky-dark));color:#fff;padding:15px 18px;display:flex;align-items:center;gap:11px;}
+.chat-hdr-av{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-size:18px;}
+.chat-hdr-info h4{font-size:14px;font-weight:700;margin-bottom:2px;}
+.chat-hdr-info p{font-size:11px;opacity:.85;}
+.chat-close{margin-left:auto;background:none;border:none;color:#fff;font-size:18px;cursor:pointer;opacity:.8;transition:opacity .2s;}
+.chat-close:hover{opacity:1;}
+#chat-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;max-height:330px;}
+.msg{max-width:85%;padding:10px 13px;border-radius:14px;font-size:13px;line-height:1.6;white-space:pre-line;}
+.msg.bot{background:#f0f9ff;color:var(--text);border-bottom-left-radius:4px;align-self:flex-start;}
+.msg.user{background:linear-gradient(135deg,var(--sky),var(--sky-dark));color:#fff;border-bottom-right-radius:4px;align-self:flex-end;}
+.msg.typing{background:#f0f9ff;color:#94a3b8;font-style:italic;align-self:flex-start;}
+.chat-input-area{padding:11px;border-top:1px solid #e2e8f0;display:flex;gap:8px;align-items:center;}
+#chat-input{flex:1;border:2px solid #e2e8f0;border-radius:22px;padding:10px 15px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;}
+#chat-input:focus{border-color:var(--sky);}
+#chat-send{background:linear-gradient(135deg,var(--sky),var(--sky-dark));color:#fff;border:none;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:transform .2s;}
+#chat-send:hover{transform:scale(1.1);}
 
+/* ── LIGHTBOX ── */
+#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;}
+#lightbox.open{display:flex;}
+#lightbox-img{max-width:95vw;max-height:90vh;border-radius:12px;box-shadow:0 12px 50px rgba(0,0,0,.5);object-fit:contain;}
+.lb-close{position:absolute;top:18px;right:18px;background:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer;font-weight:700;display:flex;align-items:center;justify-content:center;}
 
-/* ── CALL TO ACTION BANNER ── */
-.cta-banner {
-  background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-  padding:50px 20px; text-align:center; color:#fff;
-}
-.cta-banner h2 { font-family:'Montserrat',sans-serif; font-size:30px; font-weight:800; margin-bottom:10px; }
-.cta-banner p { font-size:16px; opacity:0.9; margin-bottom:28px; }
-.cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
-.cta-btn {
-  padding:15px 32px; border-radius:50px;
-  font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px;
-  text-decoration:none; transition:transform 0.2s, box-shadow 0.2s;
-  display:inline-flex; align-items:center; gap:8px;
-}
-.cta-btn.white { background:#fff; color:var(--red); }
-.cta-btn.outline { background:transparent; border:2px solid #fff; color:#fff; }
-.cta-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
-
-@media(max-width:600px){
-  header { padding:14px 16px; }
-  .logo-text h1 { font-size:16px; }
-  .hero { height:340px; }
-  nav a { padding:12px 14px; font-size:12px; }
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  header{padding:0 16px;height:auto;padding-top:10px;padding-bottom:10px;}
+  .logo-text h1{font-size:18px;}
+  .header-cta a span{display:none;}
+  .hero{height:360px;}
+  .slide-content{padding:24px 20px;}
+  nav a{padding:11px 12px;font-size:13px;}
+  .topbar{padding:7px 16px;font-size:11px;}
 }
 </style>
 </head>
@@ -548,34 +259,39 @@ footer {
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <div class="left">
-    <i class="fa-solid fa-envelope"></i>
-    <span>tinshade.noida@gmail.com</span>
+  <div class="tb-left">
+    <span><i class="fa-solid fa-envelope"></i> tinshade.noida@gmail.com</span>
+    <span><i class="fa-solid fa-location-dot"></i> D179 Sector 10, Noida</span>
   </div>
   <div>
     <a href="tel:+918527977714"><i class="fa-solid fa-phone"></i> +91-8527977714</a>
-    <a href="https://wa.me/918527977714"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://wa.me/918527977714" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://www.instagram.com/tin_shade_wearhouse" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
   </div>
 </div>
 
 <!-- HEADER -->
 <header>
   <div class="logo-area">
-    <img src="images/logo.png" alt="Tin Shade Noida Logo" onerror="this.style.display='none'">
+    <img src="images/logo.png" alt="Tin Shade Noida" onerror="this.style.display='none'">
     <div class="logo-text">
       <h1>Tin Shade Noida</h1>
       <p>Professional Tin Shed & MS Structure</p>
     </div>
   </div>
+  <div class="header-cta">
+    <a href="tel:+918527977714" class="btn-call"><i class="fa-solid fa-phone"></i> <span>Call Now</span></a>
+    <a href="https://wa.me/918527977714" class="btn-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span></a>
+  </div>
 </header>
 
 <!-- NAV -->
 <nav>
-  <a href="#about">About Us</a>
+  <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#projects">Projects</a>
   <a href="#gallery">Gallery</a>
-  <a href="#why">Why Us</a>
+  <a href="#videos">Videos</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -583,27 +299,43 @@ footer {
 <div class="hero">
   <div class="slides" id="slides">
     <div class="slide">
-      <img src="images/slider1.png" alt="Tin Shade Noida - टिन शेड बनवायें" class="slide-img">
-      <div class="slide-overlay">
-        <a href="#contact" class="slide-btn">Get Free Quote</a>
+      <img src="images/slider1.png" alt="Tin Shade Noida" class="slide-img">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="slide-tag">Trusted Since 2010</span>
+        <h2>Expert Tin Shed<br>Solutions in Noida</h2>
+        <p>Industrial & warehouse roofing specialists across NCR</p>
+        <a href="#contact" class="slide-btn"><i class="fa-solid fa-paper-plane"></i> Get Free Quote</a>
       </div>
     </div>
     <div class="slide">
-      <img src="images/slider2.png" alt="Tin Shade Noida - Your Reliable Partner" class="slide-img">
-      <div class="slide-overlay">
-        <a href="#services" class="slide-btn">Our Services</a>
+      <img src="images/slider2.png" alt="Tin Shade Noida" class="slide-img">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="slide-tag">Your Reliable Partner</span>
+        <h2>15+ Years of<br>Excellence</h2>
+        <p>Delivering quality tin shed structures on time, every time</p>
+        <a href="#services" class="slide-btn"><i class="fa-solid fa-wrench"></i> Our Services</a>
       </div>
     </div>
     <div class="slide">
-      <img src="images/slider3.png" alt="Tin Shade Noida - Industrial Shed" class="slide-img">
-      <div class="slide-overlay">
-        <a href="tel:+918527977714" class="slide-btn">📞 Call Now</a>
+      <img src="images/slider3.png" alt="Tin Shade Noida" class="slide-img">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="slide-tag">Free Site Visit</span>
+        <h2>Premium Quality<br>Steel Structures</h2>
+        <p>ISI certified materials with 5+ year durability guarantee</p>
+        <a href="tel:+918527977714" class="slide-btn"><i class="fa-solid fa-phone"></i> Call Now</a>
       </div>
     </div>
     <div class="slide">
-      <img src="images/slider4.png" alt="Tin Shade Noida - PEB Structure" class="slide-img">
-      <div class="slide-overlay">
-        <a href="#projects" class="slide-btn">View Projects</a>
+      <img src="images/slider4.png" alt="Tin Shade Noida" class="slide-img">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <span class="slide-tag">500+ Projects Completed</span>
+        <h2>Industrial Sheds &<br>PEB Structures</h2>
+        <p>Noida, Greater Noida, Delhi, Gurgaon & entire NCR region</p>
+        <a href="#projects" class="slide-btn"><i class="fa-solid fa-images"></i> View Projects</a>
       </div>
     </div>
   </div>
@@ -615,28 +347,35 @@ footer {
 </div>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="section about-section">
   <div class="section-inner">
-    <div class="section-title">
-      <div class="title-line"></div>
-      <h2>Welcome to <span>Tin Shade Noida</span></h2>
-      <p>Your trusted partner for all tin shed and MS structure solutions</p>
-    </div>
     <div class="about-grid">
-      <div class="about-img">
-        <div class="about-img-placeholder">
-          <i class="fa-solid fa-warehouse"></i>
-          <p>About Image</p>
+      <div class="about-img-wrap">
+        <img src="images/project2.png" alt="Tin Shade Noida Projects">
+        <div class="about-badge">
+          <h3>15+</h3>
+          <p>Years Experience</p>
         </div>
       </div>
       <div class="about-text">
-        <h3>Tin Shade Shelter Solutions</h3>
-        <p>Tin Shade Noida is a leading manufacturer and installer of tin sheds, MS structures, and industrial roofing solutions. We have been serving clients across Noida, Greater Noida, and the entire NCR region.</p>
-        <p>We specialize in factory sheds, warehouse roofing, parking sheds, and heavy-duty MS fabrication work. Our team of experienced professionals ensures every project is delivered on time with the highest quality standards.</p>
-        <div class="about-stats">
-          <div class="stat"><h4>500+</h4><p>Projects Done</p></div>
-          <div class="stat"><h4>10+</h4><p>Years Experience</p></div>
-          <div class="stat"><h4>100%</h4><p>Satisfaction</p></div>
+        <div class="section-title">
+          <p class="section-label">About Us</p>
+          <div class="title-bar"></div>
+          <h2>Welcome to <em>Tin Shade Noida</em></h2>
+        </div>
+        <p>Tin Shade Noida is a leading manufacturer and installer of tin sheds, MS structures, and industrial roofing solutions. Serving clients across Noida, Greater Noida, and the entire NCR region for over 15 years.</p>
+        <p>We specialize in factory sheds, warehouse roofing, parking sheds, and heavy-duty MS fabrication. Our experienced team delivers every project on time with the highest quality standards.</p>
+        <ul class="about-list">
+          <li><i class="fa-solid fa-check-circle"></i> Premium grade ISI certified steel & roofing sheets</li>
+          <li><i class="fa-solid fa-check-circle"></i> Free site visit & detailed cost estimation</li>
+          <li><i class="fa-solid fa-check-circle"></i> On-time project delivery — guaranteed</li>
+          <li><i class="fa-solid fa-check-circle"></i> 5+ year durability with rust-proof treatment</li>
+          <li><i class="fa-solid fa-check-circle"></i> Serving all of Noida, NCR, Delhi & nearby areas</li>
+        </ul>
+        <div class="stats-row">
+          <div class="stat-box"><h4>500+</h4><p>Projects</p></div>
+          <div class="stat-box"><h4>15+</h4><p>Years</p></div>
+          <div class="stat-box"><h4>100%</h4><p>Satisfied</p></div>
         </div>
       </div>
     </div>
@@ -644,179 +383,234 @@ footer {
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" class="section">
   <div class="section-inner">
-    <div class="section-title">
-      <div class="title-line"></div>
-      <h2>Our <span>Services</span></h2>
-      <p>Complete shed and roofing solutions for every requirement</p>
+    <div class="section-title center">
+      <p class="section-label">What We Offer</p>
+      <div class="title-bar"></div>
+      <h2>Our <em>Services</em></h2>
+      <p>Complete shed and roofing solutions for every industrial requirement</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
+        <div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div>
         <h3>Tin Shade Noida</h3>
+        <p>Custom tin shed installation for residential & commercial use</p>
       </div>
       <div class="service-card">
-        <div class="icon"><i class="fa-solid fa-warehouse"></i></div>
+        <div class="service-icon"><i class="fa-solid fa-warehouse"></i></div>
         <h3>Warehouse Tin Shed</h3>
+        <p>Large-scale warehouse roofing & enclosure structures</p>
       </div>
       <div class="service-card">
-        <div class="icon"><i class="fa-solid fa-industry"></i></div>
+        <div class="service-icon"><i class="fa-solid fa-industry"></i></div>
         <h3>Factory Shed Work</h3>
+        <p>Heavy-duty factory shed fabrication & installation</p>
       </div>
       <div class="service-card">
-        <div class="icon"><i class="fa-solid fa-wrench"></i></div>
+        <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
         <h3>MS Structure Fabrication</h3>
+        <p>Mild steel structural framework for industrial projects</p>
       </div>
       <div class="service-card">
-        <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
-        <h3>Industrial Platform Making</h3>
+        <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>Industrial Platform</h3>
+        <p>Metal platform fabrication, mezzanine floors & walkways</p>
       </div>
       <div class="service-card">
-        <div class="icon"><i class="fa-solid fa-car"></i></div>
+        <div class="service-icon"><i class="fa-solid fa-car"></i></div>
         <h3>Parking Shed</h3>
+        <p>Durable parking canopy & shade structures for vehicles</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="section projects-section">
   <div class="section-inner">
-    <div class="section-title">
-      <div class="title-line"></div>
-      <h2>Recent <span>Projects</span></h2>
-      <p>Hamare completed projects across Noida, Delhi & NCR</p>
+    <div class="section-title center">
+      <p class="section-label">Our Work</p>
+      <div class="title-bar"></div>
+      <h2>Completed <em>Projects</em></h2>
+      <p>A selection of our finest work across Noida, Delhi & NCR</p>
     </div>
     <div class="projects-grid">
       <div class="project-card" onclick="openLightbox('images/project1.png')">
-        <div class="img-wrap">
-          <img src="images/project1.png" alt="MS Structure - Tin Shade Noida">
-          <span class="badge">Completed</span>
-          <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        <div class="project-img">
+          <img src="images/project1.png" alt="MS Structure Fabrication">
+          <span class="project-badge">Completed</span>
+          <div class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
         </div>
-        <div class="card-body">
+        <div class="project-body">
           <h3>MS Structure Fabrication</h3>
           <p>Steel framework for industrial shed — Noida & NCR</p>
         </div>
       </div>
       <div class="project-card" onclick="openLightbox('images/project2.png')">
-        <div class="img-wrap">
-          <img src="images/project2.png" alt="Projects - Tin Shade Noida">
-          <span class="badge">Completed</span>
-          <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        <div class="project-img">
+          <img src="images/project2.png" alt="Multiple Projects">
+          <span class="project-badge">Completed</span>
+          <div class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
         </div>
-        <div class="card-body">
-          <h3>Multiple Projects</h3>
+        <div class="project-body">
+          <h3>Multiple Site Projects</h3>
           <p>Neellu Packaging, Hardoi Kanpur, Noida Aero Club & more</p>
         </div>
       </div>
-      <div class="project-card" onclick="openLightbox('images/gallery4.jpg')">
-        <div class="img-wrap">
-          <img src="images/gallery4.jpg" alt="Tin Shade Work - Noida">
-          <span class="badge">Completed</span>
-          <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      <div class="project-card" onclick="openLightbox('images/project3.jpg')">
+        <div class="project-img">
+          <img src="images/project3.jpg" alt="Tin Shade Work">
+          <span class="project-badge">Completed</span>
+          <div class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
         </div>
-        <div class="card-body">
-          <h3>Tin Shade Work</h3>
-          <p>MS structure fabrication & tin shade installation, Noida</p>
+        <div class="project-body">
+          <h3>Tin Shade Construction</h3>
+          <p>Live site tin shade work with MS channel framework</p>
         </div>
       </div>
-      <div class="project-card" onclick="openLightbox('images/gallery8.jpg')">
-        <div class="img-wrap">
-          <img src="images/gallery8.jpg" alt="MS Structure Work - Noida">
-          <span class="badge">Completed</span>
-          <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      <div class="project-card" onclick="openLightbox('images/project4.jpg')">
+        <div class="project-img">
+          <img src="images/project4.jpg" alt="Rooftop Tin Shade">
+          <span class="project-badge">Completed</span>
+          <div class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
         </div>
-        <div class="card-body">
-          <h3>MS Structure Work</h3>
-          <p>Heavy duty MS structure fabrication & welding, Noida</p>
+        <div class="project-body">
+          <h3>Rooftop Tin Shade</h3>
+          <p>Rooftop structure with corrugated tin sheet roofing</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why" class="section">
+  <div class="section-inner">
+    <div class="section-title center">
+      <p class="section-label">Why Us</p>
+      <div class="title-bar"></div>
+      <h2>Why Choose <em>Tin Shade Noida</em></h2>
+      <p>We deliver quality, reliability, and value on every single project</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🏗️</div>
+        <h3>Expert Team</h3>
+        <p>15+ years of experience with a skilled team in tin shed and MS structure fabrication across all of NCR.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">✅</div>
+        <h3>Premium Quality</h3>
+        <p>ISI certified steel and roofing sheets only. Rust-proof treatment ensures structures that last decades.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h3>On-Time Delivery</h3>
+        <p>Strict project timelines with proper planning and execution. We always deliver what we promise.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <h3>Best Value Pricing</h3>
+        <p>Competitive rates with zero hidden charges. Free site visit and detailed quotation provided.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section id="gallery" style="background:#fff; padding:70px 20px;">
+<section id="gallery" class="section gallery-section">
   <div class="section-inner">
-    <div class="section-title">
-      <div class="title-line"></div>
-      <h2>Our <span>Gallery</span></h2>
-      <p>Click on any photo to view full size</p>
+    <div class="section-title center">
+      <p class="section-label">Photo Gallery</p>
+      <div class="title-bar"></div>
+      <h2>Our <em>Gallery</em></h2>
+      <p>Click any photo to view full size</p>
     </div>
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox('images/gallery1.png')">
-        <img src="images/gallery1.png" alt="PEB Structure - Tin Shade Noida">
-        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        <img src="images/gallery1.png" alt="PEB Structure">
+        <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery2.png')">
-        <img src="images/gallery2.png" alt="Warehouse Design - Tin Shade Noida">
-        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        <img src="images/gallery2.png" alt="Warehouse Design">
+        <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery3.png')">
-        <img src="images/gallery3.png" alt="PEB Building - Tin Shade Noida">
-        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        <img src="images/gallery3.png" alt="PEB Building">
+        <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery4.jpg')">
-        <img src="images/gallery4.jpg" alt="Tin Shade Work - Tin Shade Noida">
-        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        <img src="images/gallery4.jpg" alt="Tin Shade Interior">
+        <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery5.jpg')">
-        <img src="images/gallery5.jpg" alt="Tin Shade Work - Tin Shade Noida">
-        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        <img src="images/gallery5.jpg" alt="Tin Shade Roofing">
+        <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery6.jpg')">
-        <img src="images/gallery6.jpg" alt="Tin Shade Interior - Tin Shade Noida">
-        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox('images/gallery7.jpg')">
-        <img src="images/gallery7.jpg" alt="Tin Shade Roofing - Tin Shade Noida">
-        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox('images/gallery8.jpg')">
-        <img src="images/gallery8.jpg" alt="MS Structure Work - Tin Shade Noida">
-        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        <img src="images/gallery6.jpg" alt="MS Structure Work">
+        <div class="gallery-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; flex-direction:column;">
-  <button onclick="closeLightbox()" style="position:absolute; top:18px; right:18px; background:white; border:none; border-radius:50%; width:42px; height:42px; font-size:20px; cursor:pointer; font-weight:bold; z-index:10000;">✕</button>
-  <img id="lightbox-img" src="" style="max-width:95vw; max-height:90vh; border-radius:10px; box-shadow:0 8px 40px rgba(0,0,0,0.5); object-fit:contain;">
-</div>
-
-<!-- WHY CHOOSE US -->
-<section id="why">
+<!-- VIDEOS -->
+<section id="videos" class="section">
   <div class="section-inner">
-    <div class="section-title">
-      <div class="title-line"></div>
-      <h2>Why <span>Choose Us</span></h2>
-      <p>We deliver quality, trust, and durability on every project</p>
+    <div class="section-title center">
+      <p class="section-label">See Us In Action</p>
+      <div class="title-bar"></div>
+      <h2>Work <em>Videos</em></h2>
+      <p>Click any video to watch on Instagram</p>
     </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="icon">🏗️</div>
-        <h3>Expert Team</h3>
-        <p>Experienced professionals with 10+ years in tin shed and MS structure fabrication.</p>
+    <div class="videos-grid">
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DEkN6VxyAtc/','_blank')">
+        <div class="video-thumb"><img src="images/project3.jpg" alt="Tin Shade Work"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> Tin Shade Work</div>
       </div>
-      <div class="why-card">
-        <div class="icon">✅</div>
-        <h3>Quality Materials</h3>
-        <p>We use only premium grade steel and roofing sheets that last for decades.</p>
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DVVrHe2ic6m/','_blank')">
+        <div class="video-thumb"><img src="images/project4.jpg" alt="MS Structure"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> MS Structure</div>
       </div>
-      <div class="why-card">
-        <div class="icon">⚡</div>
-        <h3>Fast Delivery</h3>
-        <p>On-time project completion with proper planning and execution.</p>
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DVTCe6HCQiU/','_blank')">
+        <div class="video-thumb"><img src="images/gallery4.jpg" alt="Shed Construction"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> Shed Construction</div>
       </div>
-      <div class="why-card">
-        <div class="icon">💰</div>
-        <h3>Best Prices</h3>
-        <p>Competitive pricing with no hidden charges. Free site visit and quotation.</p>
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DVDjwv_CTmo/','_blank')">
+        <div class="video-thumb"><img src="images/gallery5.jpg" alt="Factory Shed"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> Factory Shed</div>
       </div>
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DVDUjJPCWAw/','_blank')">
+        <div class="video-thumb"><img src="images/gallery6.jpg" alt="Warehouse Roofing"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> Warehouse Roofing</div>
+      </div>
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DT-kWW0CdmC/','_blank')">
+        <div class="video-thumb"><img src="images/project1.png" alt="Industrial Shed"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> Industrial Shed</div>
+      </div>
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DTC7SdniW8W/','_blank')">
+        <div class="video-thumb"><img src="images/slider3.png" alt="Tin Shade Noida"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> Tin Shade Noida</div>
+      </div>
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DSwV6FtibLE/','_blank')">
+        <div class="video-thumb"><img src="images/slider4.png" alt="MS Fabrication"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> MS Fabrication</div>
+      </div>
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DQ_bAPZiY3s/','_blank')">
+        <div class="video-thumb"><img src="images/gallery1.png" alt="Roofing Work"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> Roofing Work</div>
+      </div>
+      <div class="video-card" onclick="window.open('https://www.instagram.com/reel/DVzqtV2CdWb/','_blank')">
+        <div class="video-thumb"><img src="images/gallery2.png" alt="Structure Work"><div class="video-play"><div class="play-circle"><i class="fa-brands fa-instagram"></i></div><span>Watch on Instagram</span></div></div>
+        <div class="video-label"><i class="fa-brands fa-instagram"></i> Structure Work</div>
+      </div>
+    </div>
+    <div class="videos-cta">
+      <a href="https://www.instagram.com/tin_shade_wearhouse" target="_blank" class="ig-btn">
+        <i class="fa-brands fa-instagram"></i> Follow Us on Instagram for More Videos
+      </a>
     </div>
   </div>
 </section>
@@ -824,108 +618,64 @@ footer {
 <!-- CTA BANNER -->
 <div class="cta-banner">
   <h2>Ready to Start Your Project?</h2>
-  <p>Get a FREE site visit and quotation — Call or WhatsApp us today!</p>
+  <p>Get a FREE site visit and detailed quotation — Call or WhatsApp us today!</p>
   <div class="cta-btns">
     <a href="tel:+918527977714" class="cta-btn white"><i class="fa-solid fa-phone"></i> Call Now</a>
-    <a href="https://wa.me/918527977714" class="cta-btn outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://wa.me/918527977714" class="cta-btn outline" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
   </div>
 </div>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="section contact-section">
   <div class="section-inner">
-    <div class="section-title">
-      <div class="title-line"></div>
-      <h2>Get In <span>Touch</span></h2>
-      <p>We'd love to hear from you — reach us on any platform</p>
+    <div class="section-title center" style="margin-bottom:40px;">
+      <p class="section-label">Get In Touch</p>
+      <div class="title-bar"></div>
+      <h2>Contact <em>Us</em></h2>
+      <p>We're happy to help — reach us through any channel below</p>
     </div>
     <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Contact Details</h3>
-
-        <a href="tel:+918527977714" class="info-row">
-          <div class="info-icon phone"><i class="fa-solid fa-phone"></i></div>
-          <div class="info-text">
-            <strong>Call Us</strong>
-            <span>+91-8527977714</span>
-          </div>
+      <div>
+        <p class="contact-info-title">Contact Details</p>
+        <a href="tel:+918527977714" class="contact-row">
+          <div class="contact-icon ci-phone"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-row-text"><strong>Call Us</strong><span>+91-8527977714</span></div>
         </a>
-
-        <a href="https://wa.me/918527977714" class="info-row" target="_blank">
-          <div class="info-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
-          <div class="info-text">
-            <strong>WhatsApp</strong>
-            <span>+91-8527977714</span>
-          </div>
+        <a href="https://wa.me/918527977714" class="contact-row" target="_blank">
+          <div class="contact-icon ci-wa"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="contact-row-text"><strong>WhatsApp</strong><span>+91-8527977714</span></div>
         </a>
-
-        <a href="mailto:tinshade.noida@gmail.com" class="info-row">
-          <div class="info-icon email"><i class="fa-solid fa-envelope"></i></div>
-          <div class="info-text">
-            <strong>Email Us</strong>
-            <span id="contact-email-display"></span>
-          </div>
+        <a href="mailto:tinshade.noida@gmail.com" class="contact-row">
+          <div class="contact-icon ci-email"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-row-text"><strong>Email Us</strong><span id="em-display"></span></div>
         </a>
-
-        <a href="https://www.instagram.com/tin_shade_wearhouse" class="info-row" target="_blank">
-          <div class="info-icon instagram"><i class="fa-brands fa-instagram"></i></div>
-          <div class="info-text">
-            <strong>Instagram</strong>
-            <span>@tin_shade_wearhouse</span>
-          </div>
+        <a href="https://www.instagram.com/tin_shade_wearhouse" class="contact-row" target="_blank">
+          <div class="contact-icon ci-ig"><i class="fa-brands fa-instagram"></i></div>
+          <div class="contact-row-text"><strong>Instagram</strong><span>@tin_shade_wearhouse</span></div>
         </a>
-
-        <a href="https://www.facebook.com" class="info-row" target="_blank">
-          <div class="info-icon facebook"><i class="fa-brands fa-facebook-f"></i></div>
-          <div class="info-text">
-            <strong>Facebook</strong>
-            <span>Tin Shade Noida</span>
-          </div>
+        <a href="https://www.facebook.com" class="contact-row" target="_blank">
+          <div class="contact-icon ci-fb"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="contact-row-text"><strong>Facebook</strong><span>Tin Shade Noida</span></div>
         </a>
-
-        <a href="https://www.youtube.com" class="info-row" target="_blank">
-          <div class="info-icon youtube"><i class="fa-brands fa-youtube"></i></div>
-          <div class="info-text">
-            <strong>YouTube</strong>
-            <span>Tin Shade Noida</span>
-          </div>
+        <a href="https://www.youtube.com" class="contact-row" target="_blank">
+          <div class="contact-icon ci-yt"><i class="fa-brands fa-youtube"></i></div>
+          <div class="contact-row-text"><strong>YouTube</strong><span>Tin Shade Noida</span></div>
         </a>
-
-        <a href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7" class="info-row" target="_blank">
-          <div class="info-icon location"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="info-text">
-            <strong>Address</strong>
-            <span>D179 Sector 10, Noida, India</span>
-          </div>
+        <a href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7" class="contact-row" target="_blank">
+          <div class="contact-icon ci-loc"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-row-text"><strong>Address</strong><span>D179 Sector 10, Noida, India</span></div>
         </a>
       </div>
-
       <div class="contact-form-box">
         <h3>Send Us a Message</h3>
-        <div id="form-success" style="display:none; background:#dcfce7; border:1px solid #16a34a; border-radius:10px; padding:16px; text-align:center; color:#15803d; font-weight:600; margin-bottom:16px;">
-          <i class="fa-solid fa-circle-check" style="font-size:24px; margin-bottom:8px; display:block;"></i>
-          Message bhej diya! Hum jald hi contact karenge. ✅
-        </div>
-        <div id="form-error" style="display:none; background:#fee2e2; border:1px solid #dc2626; border-radius:10px; padding:16px; text-align:center; color:#dc2626; font-weight:600; margin-bottom:16px;">
-          <i class="fa-solid fa-circle-xmark" style="font-size:24px; margin-bottom:8px; display:block;"></i>
-          Kuch galat hua. Please dobara try karein. ❌
-        </div>
+        <div class="form-msg success" id="form-success"><i class="fa-solid fa-circle-check"></i> Message sent! We'll contact you shortly. ✅</div>
+        <div class="form-msg error" id="form-error"><i class="fa-solid fa-circle-xmark"></i> Something went wrong. Please try again.</div>
         <form id="contactForm">
-          <div class="form-group">
-            <input type="text" id="fname" placeholder="Your Full Name" required>
-          </div>
-          <div class="form-group">
-            <input type="tel" id="fphone" placeholder="Your Phone Number" required>
-          </div>
-          <div class="form-group">
-            <input type="email" id="femail" placeholder="Your Email Address">
-          </div>
-          <div class="form-group">
-            <textarea id="fmsg" placeholder="Describe your requirement..." required></textarea>
-          </div>
-          <button type="submit" class="submit-btn" id="submitBtn">
-            <i class="fa-solid fa-paper-plane"></i> &nbsp;Send Message
-          </button>
+          <div class="form-group"><input type="text" id="fname" placeholder="Your Full Name" required></div>
+          <div class="form-group"><input type="tel" id="fphone" placeholder="Your Phone Number" required></div>
+          <div class="form-group"><input type="email" id="femail" placeholder="Your Email Address"></div>
+          <div class="form-group"><textarea id="fmsg" placeholder="Describe your requirement..." required></textarea></div>
+          <button type="submit" class="submit-btn" id="submitBtn"><i class="fa-solid fa-paper-plane"></i> &nbsp;Send Message</button>
         </form>
       </div>
     </div>
@@ -941,235 +691,117 @@ footer {
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <img src="images/logo.png" alt="Logo" onerror="this.style.display='none'">
       <h3>Tin Shade Noida</h3>
-      <p>Professional Tin Shed, MS Structure & Warehouse Roofing solutions across Noida & NCR region.</p>
-      <div class="social-row" style="margin-top:16px;">
-        <a href="https://wa.me/918527977714" class="social-icon si-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/tin_shade_wearhouse" class="social-icon si-ig" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com" class="social-icon si-fb" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.youtube.com" class="social-icon si-yt" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        <a href="mailto:tinshade.noida@gmail.com" class="social-icon si-mail"><i class="fa-solid fa-envelope"></i></a>
-        <a href="tel:+918527977714" class="social-icon si-call"><i class="fa-solid fa-phone"></i></a>
+      <p>Leading manufacturer of tin sheds, MS structures and industrial roofing solutions across Noida, Greater Noida & NCR since 2010.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/918527977714" class="fsoc fsoc-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/tin_shade_wearhouse" class="fsoc fsoc-ig" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com" class="fsoc fsoc-fb" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com" class="fsoc fsoc-yt" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="mailto:tinshade.noida@gmail.com" class="fsoc fsoc-mail"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+918527977714" class="fsoc fsoc-call"><i class="fa-solid fa-phone"></i></a>
       </div>
     </div>
-    <div class="footer-section">
+    <div class="footer-col">
       <h4>Quick Links</h4>
-      <a href="#about">About Us</a>
-      <a href="#services">Our Services</a>
-      <a href="#projects">Projects</a>
-  <a href="#gallery">Gallery</a>
-      <a href="#why">Why Choose Us</a>
-      <a href="#contact">Contact Us</a>
+      <a href="#about"><i class="fa-solid fa-chevron-right"></i>About Us</a>
+      <a href="#services"><i class="fa-solid fa-chevron-right"></i>Our Services</a>
+      <a href="#projects"><i class="fa-solid fa-chevron-right"></i>Projects</a>
+      <a href="#gallery"><i class="fa-solid fa-chevron-right"></i>Gallery</a>
+      <a href="#videos"><i class="fa-solid fa-chevron-right"></i>Videos</a>
+      <a href="#contact"><i class="fa-solid fa-chevron-right"></i>Contact Us</a>
     </div>
-    <div class="footer-section">
+    <div class="footer-col">
       <h4>Our Services</h4>
-      <a href="#services">Tin Shade Noida</a>
-      <a href="#services">Warehouse Tin Shed</a>
-      <a href="#services">Factory Shed Work</a>
-      <a href="#services">MS Structure Fabrication</a>
-      <a href="#services">Industrial Platform Making</a>
-      <a href="#services">Parking Shed</a>
+      <a href="#services"><i class="fa-solid fa-chevron-right"></i>Tin Shade Noida</a>
+      <a href="#services"><i class="fa-solid fa-chevron-right"></i>Warehouse Tin Shed</a>
+      <a href="#services"><i class="fa-solid fa-chevron-right"></i>Factory Shed Work</a>
+      <a href="#services"><i class="fa-solid fa-chevron-right"></i>MS Structure Fabrication</a>
+      <a href="#services"><i class="fa-solid fa-chevron-right"></i>Industrial Platform</a>
+      <a href="#services"><i class="fa-solid fa-chevron-right"></i>Parking Shed</a>
     </div>
-    <div class="footer-section">
+    <div class="footer-col">
       <h4>Contact</h4>
-      <a href="tel:+918527977714"><i class="fa-solid fa-phone" style="margin-right:8px;"></i>+91-8527977714</a>
-      <a href="mailto:tinshade.noida@gmail.com"><i class="fa-solid fa-envelope" style="margin-right:8px;"></i>tinshade.noida@gmail.com</a>
-      <a href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7" target="_blank"><i class="fa-solid fa-location-dot" style="margin-right:8px;"></i>D179 Sector 10, Noida</a>
+      <a href="tel:+918527977714"><i class="fa-solid fa-phone"></i>+91-8527977714</a>
+      <a href="mailto:tinshade.noida@gmail.com"><i class="fa-solid fa-envelope"></i>tinshade.noida&#64;gmail.com</a>
+      <a href="https://maps.app.goo.gl/YEhrPat4Lw7ZMc2F7" target="_blank"><i class="fa-solid fa-location-dot"></i>D179 Sector 10, Noida</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Tin Shade Noida. All Rights Reserved.</p>
+    <p>© 2026 Tin Shade Noida. All Rights Reserved. | Professional Tin Shed & MS Structure Manufacturer in Noida</p>
   </div>
 </footer>
 
-<!-- AI CHAT WIDGET -->
-<button id="ai-chat-btn" onclick="toggleChat()" title="Chat with us!">
-  <i class="fa-solid fa-robot"></i>
-</button>
+<!-- AI CHAT BUTTON -->
+<button id="ai-chat-btn" onclick="toggleChat()" title="Chat with us"><i class="fa-solid fa-robot"></i></button>
 
+<!-- AI CHAT BOX -->
 <div id="ai-chat-box">
-  <div class="chat-header">
-    <div class="chat-header-avatar"><i class="fa-solid fa-robot"></i></div>
-    <div class="chat-header-info">
-      <h4>Tin Shade Assistant</h4>
-      <p>🟢 Online — Instant Reply</p>
-    </div>
-    <button class="chat-header-close" onclick="toggleChat()">✕</button>
+  <div class="chat-hdr">
+    <div class="chat-hdr-av"><i class="fa-solid fa-robot"></i></div>
+    <div class="chat-hdr-info"><h4>Tin Shade Assistant</h4><p>🟢 Online — Instant Reply</p></div>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
   </div>
-
-  <div id="chat-section" style="display:flex; flex-direction:column; flex:1;">
-    <div id="chat-messages"></div>
-    <div class="chat-input-area">
-      <input type="text" id="chat-input" placeholder="Apna sawal poochein..." onkeydown="if(event.key==='Enter')sendMsg()">
-      <button id="chat-send" onclick="sendMsg()"><i class="fa-solid fa-paper-plane"></i></button>
-    </div>
+  <div id="chat-msgs"></div>
+  <div class="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Ask us anything..." onkeydown="if(event.key==='Enter')sendMsg()">
+    <button id="chat-send" onclick="sendMsg()"><i class="fa-solid fa-paper-plane"></i></button>
   </div>
 </div>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Gallery">
+</div>
+
 <script>
-// FORM SUBMIT via Formspree
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = document.getElementById('submitBtn');
-  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> &nbsp;Sending...';
-  btn.disabled = true;
-
-  const data = {
-    name: document.getElementById('fname').value,
-    phone: document.getElementById('fphone').value,
-    email: document.getElementById('femail').value,
-    message: document.getElementById('fmsg').value
-  };
-
-  try {
-    const res = await fetch('https://formspree.io/f/mdawdwog', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    if (res.ok) {
-      document.getElementById('form-success').style.display = 'block';
-      document.getElementById('form-error').style.display = 'none';
-      document.getElementById('contactForm').reset();
-    } else { throw new Error('Failed'); }
-  } catch {
-    document.getElementById('form-error').style.display = 'block';
-    document.getElementById('form-success').style.display = 'none';
-  }
-  btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> &nbsp;Send Message';
-  btn.disabled = false;
-});
-
-// SMART RULE-BASED CHAT (No API needed)
-const responses = {
-  greet: {
-    patterns: ['hi','hello','helo','hii','namaste','namaskar','hey','good morning','good evening','salam','assalam'],
-    reply: '👋 Namaste! Main Tin Shade Noida ka Assistant hun.\n\nAap mujhse pooch sakte ho:\n🏗️ Services & Pricing\n📞 Contact Details\n📅 Free Site Visit Book Karna\n\nKya jaanna chahte ho?'
-  },
-  price: {
-    patterns: ['rate','price','cost','kitna','paisa','lagega','charge','budget','pricing','rupee','rs','amount','quote','estimate'],
-    reply: '💰 Approximate Rates:\n\n• Tin Shed: ₹150-250/sq ft\n• Factory/Warehouse Shed: ₹200-350/sq ft\n• MS Structure: ₹180-300/sq ft\n• Parking Shed: ₹120-200/sq ft\n• Industrial Platform: Project ke hisaab se\n\n📌 Exact quote ke liye FREE site visit hoti hai!\n\n📞 Call: +91-8527977714\n💬 WhatsApp: +91-8527977714'
-  },
-  services: {
-    patterns: ['service','kaam','work','shed','structure','roofing','warehouse','factory','parking','industrial','platform','fabricat','tin'],
-    reply: '🏗️ Hamaari Services:\n\n1️⃣ Tin Shade Noida\n2️⃣ Warehouse Tin Shed\n3️⃣ Factory Shed Work\n4️⃣ MS Structure Fabrication\n5️⃣ Industrial Platform Making\n6️⃣ Parking Shed\n\nKisi bhi service ke baare mein detail jaanni ho toh batao! 😊'
-  },
-  contact: {
-    patterns: ['contact','phone','number','call','whatsapp','email','address','location','kahan','office','milna','baat'],
-    reply: '📞 Contact Details:\n\n📱 Call: +91-8527977714\n💬 WhatsApp: +91-8527977714\n📧 Email: tinshade.noida@gmail.com\n📍 Address: D179 Sector 10, Noida\n📸 Instagram: @tin_shade_wearhouse\n\nSome time humse contact karein!'
-  },
-  visit: {
-    patterns: ['visit','site','survey','dekhna','aao','bulao','inspect','free'],
-    reply: '📅 FREE Site Visit:\n\nHum aapke site par FREE visit karte hain!\n\n✅ Visit mein:\n• Site measurement\n• Material suggestion\n• Exact quote\n• Timeline discuss\n\n📞 Abhi call karo ya WhatsApp karo:\n+91-8527977714\n\nHum 24 ghante mein visit schedule karte hain! 🚀'
-  },
-  time: {
-    patterns: ['kitne din','time','kitna time','kab','deadline','complete','finish','days','week','month'],
-    reply: '⏱️ Project Timeline:\n\n• Small Shed (upto 1000 sq ft): 7-10 din\n• Medium Shed (1000-3000 sq ft): 15-20 din\n• Large Warehouse: 25-35 din\n• MS Structure: 10-15 din\n\nHum time par kaam complete karte hain! ✅\n\n📞 Details ke liye: +91-8527977714'
-  },
-  quality: {
-    patterns: ['quality','material','strong','durable','guarantee','warranty','brand','steel','sheet'],
-    reply: '✅ Quality Assurance:\n\n• Premium Grade Steel use karte hain\n• ISI Certified roofing sheets\n• Rust-proof treatment\n• 5+ saal ki durability\n• Experienced team of 10+ years\n\n💪 Hamare 500+ satisfied customers hain!\n\n📞 +91-8527977714'
-  },
-  thanks: {
-    patterns: ['thanks','thank','shukriya','dhanyawad','ok','okay','acha','theek','great','nice','good','badhiya'],
-    reply: '😊 Khushi hui aapki madad karke!\n\nKoi aur sawaal ho toh poochein.\n\n📞 Direct baat ke liye:\n+91-8527977714\n💬 WhatsApp bhi kar sakte ho!'
-  },
-  noida: {
-    patterns: ['noida','greater noida','ncr','delhi','ghaziabad','faridabad','gurugram','gurgaon'],
-    reply: '📍 Service Area:\n\nHum poore NCR mein kaam karte hain:\n✅ Noida (all sectors)\n✅ Greater Noida\n✅ Ghaziabad\n✅ Faridabad\n✅ Gurugram/Gurgaon\n✅ Delhi\n\n📞 Apna location batao: +91-8527977714'
-  }
-};
-
-function toggleChat() {
-  const box = document.getElementById('ai-chat-box');
-  box.classList.toggle('open');
-  if (box.classList.contains('open') && document.getElementById('chat-messages').children.length === 0) {
-    addMsg('bot', '👋 Namaste! Main Tin Shade Noida ka Assistant hun.\n\nAap mujhse pooch sakte ho:\n🏗️ Services & Pricing\n📞 Contact Details\n📅 Free Site Visit Book Karna\n\nKya jaanna chahte ho?');
-  }
-}
-
-function addMsg(type, text) {
-  const msgs = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'msg ' + type;
-  div.style.whiteSpace = 'pre-line';
-  div.textContent = text;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-  return div;
-}
-
-function getBotReply(input) {
-  const text = input.toLowerCase().trim();
-  for (const key in responses) {
-    const r = responses[key];
-    if (r.patterns.some(p => text.includes(p))) {
-      return r.reply;
-    }
-  }
-  // Default reply
-  return '🤔 Samajh nahi aaya. Aap seedha contact kar sakte ho:\n\n📞 Call: +91-8527977714\n💬 WhatsApp: +91-8527977714\n\nYa in topics pe poochho:\n• Services & Pricing\n• Site Visit\n• Contact Details\n• Project Timeline';
-}
-
-function sendMsg() {
-  const input = document.getElementById('chat-input');
-  const text = input.value.trim();
-  if (!text) return;
-  input.value = '';
-
-  addMsg('user', text);
-
-  const typingDiv = addMsg('typing', '⏳ Soch raha hun...');
-  document.getElementById('chat-send').disabled = true;
-
-  setTimeout(() => {
-    typingDiv.remove();
-    const reply = getBotReply(text);
-    addMsg('bot', reply);
-    document.getElementById('chat-send').disabled = false;
-    document.getElementById('chat-input').focus();
-  }, 700);
-}
-
-
-
+// EMAIL
+(function(){var e="tinshade.noida"+"@gmail.com";var el=document.getElementById('em-display');if(el){el.textContent=e;}})();
 
 // LIGHTBOX
-function openLightbox(src) {
-  const lb = document.getElementById('lightbox');
-  document.getElementById('lightbox-img').src = src;
-  lb.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-});
+function openLightbox(src){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden';}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
 
 // SLIDER
-let current = 0;
-const slides = document.getElementById('slides');
-const dots = document.querySelectorAll('#dots span');
-const total = 4;
-function goTo(n) {
-  current = (n + total) % total;
-  slides.style.transform = 'translateX(-' + (current * 100) + '%)';
-  dots.forEach((d,i) => d.classList.toggle('active', i === current));
-}
-function moveSlide(dir) { goTo(current + dir); }
-dots.forEach((d,i) => d.addEventListener('click', () => goTo(i)));
-setInterval(() => moveSlide(1), 4500);
-</script>
-<script>
-// Email display fix - bypass Cloudflare
-var e="tinshade.noida"+"@gmail.com";
-document.querySelectorAll(".email-js").forEach(function(el){el.textContent=e;});
-var cd=document.getElementById("contact-email-display");
-if(cd){var a=document.createElement("a");a.href="mailto:"+e;a.textContent=e;a.style.color="inherit";cd.appendChild(a);}
+let cur=0;
+const slides=document.getElementById('slides');
+const dots=document.querySelectorAll('#dots span');
+const total=4;
+function goTo(n){cur=(n+total)%total;slides.style.transform='translateX(-'+(cur*100)+'%)';dots.forEach((d,i)=>d.classList.toggle('active',i===cur));}
+function moveSlide(dir){goTo(cur+dir);}
+dots.forEach((d,i)=>d.addEventListener('click',()=>goTo(i)));
+setInterval(()=>moveSlide(1),4800);
+
+// AI CHAT
+const botResponses={
+  greet:{p:['hi','hello','hii','hey','namaste','salam','good'],r:'👋 Hello! Welcome to Tin Shade Noida.\n\nI can help you with:\n🏗️ Services & Pricing\n📞 Contact Details\n📅 Free Site Visit Booking\n\nWhat would you like to know?'},
+  price:{p:['rate','price','cost','charge','budget','pricing','rupee','rs','amount','quote','estimate','kitna','paisa'],r:'💰 Our Approximate Rates:\n\n• Tin Shed: ₹150–250/sq ft\n• Factory/Warehouse Shed: ₹200–350/sq ft\n• MS Structure: ₹180–300/sq ft\n• Parking Shed: ₹120–200/sq ft\n• Industrial Platform: As per project\n\n📌 Exact quote requires a FREE site visit.\n\n📞 Call: +91-8527977714'},
+  services:{p:['service','work','shed','structure','roofing','warehouse','factory','parking','industrial','platform','tin'],r:'🏗️ Our Services:\n\n1️⃣ Tin Shade Installation\n2️⃣ Warehouse Tin Shed\n3️⃣ Factory Shed Work\n4️⃣ MS Structure Fabrication\n5️⃣ Industrial Platform Making\n6️⃣ Parking Shed\n\nCall for details: +91-8527977714'},
+  contact:{p:['contact','phone','number','call','whatsapp','email','address','location','office'],r:'📞 Contact Details:\n\n📱 Call/WhatsApp: +91-8527977714\n📧 Email: tinshade.noida@gmail.com\n📍 D179 Sector 10, Noida\n📸 Instagram: @tin_shade_wearhouse'},
+  visit:{p:['visit','survey','free','inspect','site'],r:'📅 FREE Site Visit:\n\nWe offer completely FREE site visits!\n\n✅ Site measurement\n✅ Material recommendation\n✅ Exact cost estimate\n✅ Project timeline discussion\n\n📞 Book now: +91-8527977714\nWe schedule within 24 hours! 🚀'},
+  timeline:{p:['days','time','kab','deadline','complete','finish','week','month','kitne'],r:'⏱️ Project Timelines:\n\n• Small Shed (up to 1000 sq ft): 7–10 days\n• Medium Shed (1000–3000 sq ft): 15–20 days\n• Large Warehouse: 25–35 days\n• MS Structure: 10–15 days\n\nOn-time delivery — guaranteed! ✅'},
+  area:{p:['noida','greater noida','ncr','delhi','ghaziabad','faridabad','gurgaon','gurugram'],r:'📍 Our Service Area:\n\n✅ All of Noida\n✅ Greater Noida\n✅ Ghaziabad\n✅ Faridabad\n✅ Gurugram / Gurgaon\n✅ Delhi NCR\n\n📞 Tell us your location: +91-8527977714'},
+  thanks:{p:['thanks','thank','ok','okay','great','good','nice','perfect'],r:'😊 You\'re welcome! Feel free to ask anything.\n\n📞 Direct contact:\n+91-8527977714\n💬 WhatsApp us anytime!'}
+};
+function toggleChat(){const b=document.getElementById('ai-chat-box');b.classList.toggle('open');if(b.classList.contains('open')&&document.getElementById('chat-msgs').children.length===0){addMsg('bot','👋 Hello! I\'m the Tin Shade Noida Assistant.\n\nAsk me about:\n🏗️ Services & Pricing\n📞 Contact Details\n📅 Free Site Visit\n\nHow can I help you today?');}}
+function addMsg(t,txt){const m=document.getElementById('chat-msgs');const d=document.createElement('div');d.className='msg '+t;d.textContent=txt;m.appendChild(d);m.scrollTop=m.scrollHeight;}
+function getReply(input){const t=input.toLowerCase();for(const k in botResponses){if(botResponses[k].p.some(p=>t.includes(p)))return botResponses[k].r;}return '🤔 I\'m not sure about that.\n\nFor best assistance, contact us directly:\n\n📞 +91-8527977714\n💬 WhatsApp: +91-8527977714\n\nOr ask about: Services, Pricing, Site Visit, Contact';}
+function sendMsg(){const i=document.getElementById('chat-input');const t=i.value.trim();if(!t)return;i.value='';addMsg('user',t);const ty=addMsg('typing','Typing...');document.getElementById('chat-send').disabled=true;setTimeout(()=>{ty.remove();addMsg('bot',getReply(t));document.getElementById('chat-send').disabled=false;document.getElementById('chat-input').focus();},650);}
+
+// CONTACT FORM
+document.getElementById('contactForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const btn=document.getElementById('submitBtn');
+  btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Sending...';btn.disabled=true;
+  try{
+    const res=await fetch('https://formspree.io/f/mdawdwog',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:document.getElementById('fname').value,phone:document.getElementById('fphone').value,email:document.getElementById('femail').value,message:document.getElementById('fmsg').value})});
+    if(res.ok){document.getElementById('form-success').style.display='block';document.getElementById('form-error').style.display='none';document.getElementById('contactForm').reset();}
+    else throw new Error();
+  }catch{document.getElementById('form-error').style.display='block';document.getElementById('form-success').style.display='none';}
+  btn.innerHTML='<i class="fa-solid fa-paper-plane"></i> &nbsp;Send Message';btn.disabled=false;
+});
 </script>
 </body>
 </html>
