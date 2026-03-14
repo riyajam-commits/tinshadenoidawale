@@ -488,20 +488,7 @@ footer {
   transition:transform 0.2s;
 }
 #chat-send:hover { transform:scale(1.1); }
-.api-key-box {
-  padding:16px; background:#fafafa;
-}
-.api-key-box p { font-size:12px; color:#64748b; margin-bottom:8px; text-align:center; }
-.api-key-box input {
-  width:100%; padding:10px 12px; border:2px solid #e2e8f0;
-  border-radius:10px; font-size:12px; margin-bottom:8px; outline:none;
-}
-.api-key-box input:focus { border-color:#0ea5e9; }
-.api-key-box button {
-  width:100%; padding:10px; background:linear-gradient(135deg,#0ea5e9,#0284c7);
-  color:#fff; border:none; border-radius:10px; font-weight:700;
-  cursor:pointer; font-size:13px;
-}
+
 
 /* ── CALL TO ACTION BANNER ── */
 .cta-banner {
@@ -929,13 +916,7 @@ footer {
     <button class="chat-header-close" onclick="toggleChat()">✕</button>
   </div>
 
-  <div id="api-key-section" class="api-key-box">
-    <p>🔑 Ek baar API Key daalo activate karne ke liye:</p>
-    <input type="password" id="api-key-input" placeholder="sk-ant-api03-...">
-    <button onclick="saveKey()">Activate Chat ✅</button>
-  </div>
-
-  <div id="chat-section" style="display:none; flex-direction:column; flex:1;">
+  <div id="chat-section" style="display:flex; flex-direction:column; flex:1;">
     <div id="chat-messages"></div>
     <div class="chat-input-area">
       <input type="text" id="chat-input" placeholder="Apna sawal poochein..." onkeydown="if(event.key==='Enter')sendMsg()">
@@ -978,98 +959,51 @@ document.getElementById('contactForm').addEventListener('submit', async function
   btn.disabled = false;
 });
 
-// AI CHAT
-const SYSTEM_PROMPT = `Aap Tin Shade Noida ke helpful customer support agent ho. 
-Aap Hindi, English aur Hinglish (Hindi+English mix) teeno mein baat kar sakte ho.
-Visitor jis bhasha mein baat kare, usi mein jawab do.
-
-Business Info:
-- Naam: Tin Shade Noida
-- Services: Tin Shade, Warehouse Tin Shed, Factory Shed Work, MS Structure Fabrication, Industrial Platform Making, Parking Shed
-- Address: D179 Sector 10, Noida, India
-- Phone: +91-8527977714
-- WhatsApp: +91-8527977714
-- Email: tinshade.noida@gmail.com
-- Instagram: @tin_shade_wearhouse
-
-Pricing Guide (approximate):
-- Simple Tin Shed: Rs. 150-250 per sq ft
-- Factory/Warehouse Shed: Rs. 200-350 per sq ft
-- MS Structure: Rs. 180-300 per sq ft
-- Parking Shed: Rs. 120-200 per sq ft
-- Industrial Platform: Project ke hisaab se quote
-
-Kaam:
-1. Services ke baare mein detail mein batao
-2. Rough price estimate do (exact quote ke liye site visit zaroori hai)
-3. Contact details share karo
-4. Free site visit book karne mein help karo (call ya WhatsApp par)
-
-Short aur helpful jawab do. Emojis use karo. Har jawab mein contact ka option do.`;
-
-let chatHistory = [];
-let apiKey = localStorage.getItem('tsn_api_key') || '';
+// SMART RULE-BASED CHAT (No API needed)
+const responses = {
+  greet: {
+    patterns: ['hi','hello','helo','hii','namaste','namaskar','hey','good morning','good evening','salam','assalam'],
+    reply: '👋 Namaste! Main Tin Shade Noida ka Assistant hun.\n\nAap mujhse pooch sakte ho:\n🏗️ Services & Pricing\n📞 Contact Details\n📅 Free Site Visit Book Karna\n\nKya jaanna chahte ho?'
+  },
+  price: {
+    patterns: ['rate','price','cost','kitna','paisa','lagega','charge','budget','pricing','rupee','rs','amount','quote','estimate'],
+    reply: '💰 Approximate Rates:\n\n• Tin Shed: ₹150-250/sq ft\n• Factory/Warehouse Shed: ₹200-350/sq ft\n• MS Structure: ₹180-300/sq ft\n• Parking Shed: ₹120-200/sq ft\n• Industrial Platform: Project ke hisaab se\n\n📌 Exact quote ke liye FREE site visit hoti hai!\n\n📞 Call: +91-8527977714\n💬 WhatsApp: +91-8527977714'
+  },
+  services: {
+    patterns: ['service','kaam','work','shed','structure','roofing','warehouse','factory','parking','industrial','platform','fabricat','tin'],
+    reply: '🏗️ Hamaari Services:\n\n1️⃣ Tin Shade Noida\n2️⃣ Warehouse Tin Shed\n3️⃣ Factory Shed Work\n4️⃣ MS Structure Fabrication\n5️⃣ Industrial Platform Making\n6️⃣ Parking Shed\n\nKisi bhi service ke baare mein detail jaanni ho toh batao! 😊'
+  },
+  contact: {
+    patterns: ['contact','phone','number','call','whatsapp','email','address','location','kahan','office','milna','baat'],
+    reply: '📞 Contact Details:\n\n📱 Call: +91-8527977714\n💬 WhatsApp: +91-8527977714\n📧 Email: tinshade.noida@gmail.com\n📍 Address: D179 Sector 10, Noida\n📸 Instagram: @tin_shade_wearhouse\n\nSome time humse contact karein!'
+  },
+  visit: {
+    patterns: ['visit','site','survey','dekhna','aao','bulao','inspect','free'],
+    reply: '📅 FREE Site Visit:\n\nHum aapke site par FREE visit karte hain!\n\n✅ Visit mein:\n• Site measurement\n• Material suggestion\n• Exact quote\n• Timeline discuss\n\n📞 Abhi call karo ya WhatsApp karo:\n+91-8527977714\n\nHum 24 ghante mein visit schedule karte hain! 🚀'
+  },
+  time: {
+    patterns: ['kitne din','time','kitna time','kab','deadline','complete','finish','days','week','month'],
+    reply: '⏱️ Project Timeline:\n\n• Small Shed (upto 1000 sq ft): 7-10 din\n• Medium Shed (1000-3000 sq ft): 15-20 din\n• Large Warehouse: 25-35 din\n• MS Structure: 10-15 din\n\nHum time par kaam complete karte hain! ✅\n\n📞 Details ke liye: +91-8527977714'
+  },
+  quality: {
+    patterns: ['quality','material','strong','durable','guarantee','warranty','brand','steel','sheet'],
+    reply: '✅ Quality Assurance:\n\n• Premium Grade Steel use karte hain\n• ISI Certified roofing sheets\n• Rust-proof treatment\n• 5+ saal ki durability\n• Experienced team of 10+ years\n\n💪 Hamare 500+ satisfied customers hain!\n\n📞 +91-8527977714'
+  },
+  thanks: {
+    patterns: ['thanks','thank','shukriya','dhanyawad','ok','okay','acha','theek','great','nice','good','badhiya'],
+    reply: '😊 Khushi hui aapki madad karke!\n\nKoi aur sawaal ho toh poochein.\n\n📞 Direct baat ke liye:\n+91-8527977714\n💬 WhatsApp bhi kar sakte ho!'
+  },
+  noida: {
+    patterns: ['noida','greater noida','ncr','delhi','ghaziabad','faridabad','gurugram','gurgaon'],
+    reply: '📍 Service Area:\n\nHum poore NCR mein kaam karte hain:\n✅ Noida (all sectors)\n✅ Greater Noida\n✅ Ghaziabad\n✅ Faridabad\n✅ Gurugram/Gurgaon\n✅ Delhi\n\n📞 Apna location batao: +91-8527977714'
+  }
+};
 
 function toggleChat() {
   const box = document.getElementById('ai-chat-box');
   box.classList.toggle('open');
-  if (box.classList.contains('open')) {
-    if (apiKey) {
-      showChatSection();
-    }
-  }
-}
-
-async function saveKey() {
-  const k = document.getElementById('api-key-input').value.trim();
-  if (!k.startsWith('sk-ant-')) {
-    alert('Sahi API key daalo (sk-ant- se shuru honi chahiye)');
-    return;
-  }
-  const btn = document.querySelector('.api-key-box button');
-  btn.textContent = '⏳ Checking...';
-  btn.disabled = true;
-
-  try {
-    const testRes = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': k,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 10,
-        messages: [{ role: 'user', content: 'hi' }]
-      })
-    });
-    const testData = await testRes.json();
-    if (testData.error && testData.error.type === 'authentication_error') {
-      alert('❌ API Key galat hai! Dobara check karo.');
-      btn.textContent = 'Activate Chat ✅';
-      btn.disabled = false;
-      return;
-    }
-    apiKey = k;
-    localStorage.setItem('tsn_api_key', k);
-    showChatSection();
-  } catch(e) {
-    // If CORS or network error, still try to proceed
-    apiKey = k;
-    localStorage.setItem('tsn_api_key', k);
-    showChatSection();
-  }
-  btn.textContent = 'Activate Chat ✅';
-  btn.disabled = false;
-}
-
-function showChatSection() {
-  document.getElementById('api-key-section').style.display = 'none';
-  document.getElementById('chat-section').style.display = 'flex';
-  if (chatHistory.length === 0) {
-    addMsg('bot', '👋 Namaste! Main Tin Shade Noida ka AI Assistant hun.\n\nAap mujhse pooch sakte ho:\n• 🏗️ Services & pricing\n• 📞 Contact details\n• 📅 Free site visit book karna\n\nKya jaanna chahte ho?');
+  if (box.classList.contains('open') && document.getElementById('chat-messages').children.length === 0) {
+    addMsg('bot', '👋 Namaste! Main Tin Shade Noida ka Assistant hun.\n\nAap mujhse pooch sakte ho:\n🏗️ Services & Pricing\n📞 Contact Details\n📅 Free Site Visit Book Karna\n\nKya jaanna chahte ho?');
   }
 }
 
@@ -1084,69 +1018,39 @@ function addMsg(type, text) {
   return div;
 }
 
-async function sendMsg() {
+function getBotReply(input) {
+  const text = input.toLowerCase().trim();
+  for (const key in responses) {
+    const r = responses[key];
+    if (r.patterns.some(p => text.includes(p))) {
+      return r.reply;
+    }
+  }
+  // Default reply
+  return '🤔 Samajh nahi aaya. Aap seedha contact kar sakte ho:\n\n📞 Call: +91-8527977714\n💬 WhatsApp: +91-8527977714\n\nYa in topics pe poochho:\n• Services & Pricing\n• Site Visit\n• Contact Details\n• Project Timeline';
+}
+
+function sendMsg() {
   const input = document.getElementById('chat-input');
   const text = input.value.trim();
-  if (!text || !apiKey) return;
+  if (!text) return;
   input.value = '';
 
   addMsg('user', text);
-  chatHistory.push({ role: 'user', content: text });
 
   const typingDiv = addMsg('typing', '⏳ Soch raha hun...');
   document.getElementById('chat-send').disabled = true;
 
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 400,
-        system: SYSTEM_PROMPT,
-        messages: chatHistory
-      })
-    });
-
-    const data = await res.json();
+  setTimeout(() => {
     typingDiv.remove();
-
-    if (data.error) {
-      console.error('API Error:', data.error);
-      if (data.error.type === 'authentication_error') {
-        addMsg('bot', '🔑 API Key galat hai. Neeche key dobara daalo.');
-        localStorage.removeItem('tsn_api_key');
-        apiKey = '';
-        document.getElementById('chat-section').style.display = 'none';
-        document.getElementById('api-key-section').style.display = 'block';
-      } else {
-        addMsg('bot', '❌ Error: ' + data.error.message + '\n\nCall karo: +91-8527977714');
-      }
-    } else if (data.content && data.content[0]) {
-      const reply = data.content[0].text;
-      chatHistory.push({ role: 'assistant', content: reply });
-      addMsg('bot', reply);
-    } else {
-      addMsg('bot', '❌ Kuch problem aayi. Please call karo: +91-8527977714');
-    }
-  } catch(err) {
-    typingDiv.remove();
-    console.error('Fetch error:', err);
-    addMsg('bot', '❌ Connection error. Internet check karo ya call karo: +91-8527977714');
-  }
-  document.getElementById('chat-send').disabled = false;
-  document.getElementById('chat-input').focus();
+    const reply = getBotReply(text);
+    addMsg('bot', reply);
+    document.getElementById('chat-send').disabled = false;
+    document.getElementById('chat-input').focus();
+  }, 700);
 }
 
-// Check saved key on load
-window.addEventListener('load', function() {
-  if (apiKey) showChatSection();
-});
+
 
 // SLIDER
 let current = 0;
