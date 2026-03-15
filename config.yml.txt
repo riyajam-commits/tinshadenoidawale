@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "Website Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "admin/settings.json"
+        fields:
+          - { label: "Business Name", name: "business_name", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "WhatsApp Number", name: "whatsapp", widget: "string" }
+          - { label: "Instagram Link", name: "instagram", widget: "string" }
+          - { label: "Facebook Link", name: "facebook", widget: "string" }
+          - { label: "YouTube Link", name: "youtube", widget: "string" }
+
+  - name: "slider"
+    label: "Hero Slider Images"
+    folder: "admin/slider"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Slide Title", name: "title", widget: "string" }
+      - { label: "Slide Description", name: "description", widget: "string" }
+      - { label: "Slide Image", name: "image", widget: "image" }
+      - { label: "Button Text", name: "btn_text", widget: "string", default: "Get Free Quote" }
+      - { label: "Button Link", name: "btn_link", widget: "string", default: "#contact" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "admin/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Project Image", name: "image", widget: "image" }
+      - { label: "Status", name: "status", widget: "select", options: ["Completed", "In Progress", "Upcoming"] }
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "admin/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Image Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+
+  - name: "videos"
+    label: "Videos"
+    folder: "admin/videos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Video Title", name: "title", widget: "string" }
+      - { label: "Instagram Reel Link", name: "link", widget: "string" }
+      - { label: "Thumbnail Image", name: "thumbnail", widget: "image" }
