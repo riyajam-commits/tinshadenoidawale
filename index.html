@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tin Shade Noida | Professional Tin Shed & MS Structure Manufacturer</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta name="description" content="Tin Shade Noida – Leading manufacturer of tin sheds, MS structures, warehouse roofing & industrial sheds across Noida, Greater Noida & NCR.">
+<meta name="description" content="Tin Shade Noida – Leading manufacturer of tin sheds, MS structures, warehouse roofing & industrial sheds across Noida, Greater Noida & NCR.">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z6QQNMDXK"></script>
 <script>
@@ -785,17 +784,34 @@ document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox()
 
 // ── AI CHAT ──
 const botR={
-  greet:{p:['hi','hello','hey','namaste'],r:'👋 Hello! Welcome to Tin Shade Noida.\n\nI can help you with:\n🏗️ Services & Pricing\n📞 Contact Details\n📅 Free Site Visit\n\nHow can I help?'},
-  price:{p:['rate','price','cost','quote','estimate','rupee','rs'],r:'💰 Approximate Rates:\n\n• Tin Shed: ₹150–250/sq ft\n• Warehouse Shed: ₹200–350/sq ft\n• MS Structure: ₹180–300/sq ft\n• Parking Shed: ₹120–200/sq ft\n\n📞 Call for exact quote: +91-8527977714'},
-  services:{p:['service','shed','structure','roofing','warehouse','factory','parking'],r:'🏗️ Our Services:\n\n1️⃣ Tin Shade Installation\n2️⃣ Warehouse Tin Shed\n3️⃣ Factory Shed Work\n4️⃣ MS Structure Fabrication\n5️⃣ Industrial Platform\n6️⃣ Parking Shed\n\n📞 +91-8527977714'},
-  contact:{p:['contact','phone','call','whatsapp','email','address'],r:'📞 Contact Us:\n\n📱 Call/WhatsApp: +91-8527977714\n📧 tinshade.noida@gmail.com\n📍 D179 Sector 10, Noida'},
-  visit:{p:['visit','free','site','survey'],r:'📅 FREE Site Visit!\n\n✅ Measurement\n✅ Material advice\n✅ Exact quote\n\n📞 Book now: +91-8527977714'},
-  thanks:{p:['thanks','thank','ok','okay','great'],r:'😊 You\'re welcome!\n\n📞 +91-8527977714\n💬 WhatsApp us anytime!'}
+  greet:{p:['hi','hii','hello','hey','namaste','salam','good morning','good evening','helo','hiya'],r:'👋 Hello! Welcome to Tin Shade Noida.\n\nI can help you with:\n🏗️ Services & Pricing\n📞 Contact Details\n📅 Free Site Visit\n\nHow can I help?'},
+  price:{p:['rate','price','cost','quote','estimate','rupee','rs','kitna','paisa','lagega','charge','budget','amount','pricing','cheap','affordable'],r:'💰 Approximate Rates:\n\n• Tin Shed: ₹150–250/sq ft\n• Warehouse Shed: ₹200–350/sq ft\n• MS Structure: ₹180–300/sq ft\n• Parking Shed: ₹120–200/sq ft\n• Industrial Platform: As per project\n\n📌 Free site visit for exact quote!\n📞 +91-8527977714'},
+  services:{p:['service','pricing','shed','structure','roofing','warehouse','factory','parking','industrial','platform','tin','work','kaam','banwana','banana','ms','peb'],r:'🏗️ Our Services:\n\n1️⃣ Tin Shade Installation\n2️⃣ Warehouse Tin Shed\n3️⃣ Factory Shed Work\n4️⃣ MS Structure Fabrication\n5️⃣ Industrial Platform Making\n6️⃣ Parking Shed\n\n📞 Call for details: +91-8527977714'},
+  contact:{p:['contact','phone','number','call','whatsapp','email','address','location','office','milna','baat','reach'],r:'📞 Contact Us:\n\n📱 Call/WhatsApp: +91-8527977714\n📧 tinshade.noida@gmail.com\n📍 D179 Sector 10, Noida\n📸 Instagram: @tin_shade_wearhouse'},
+  visit:{p:['visit','free','site','survey','inspection','dekhna','aao','bulao'],r:'📅 FREE Site Visit!\n\n✅ Site measurement\n✅ Material advice\n✅ Exact quote\n✅ Timeline discussion\n\n📞 Book now: +91-8527977714\nWe schedule within 24 hours! 🚀'},
+  time:{p:['time','days','week','month','kitne din','kab','deadline','complete','finish','jaldi'],r:'⏱️ Project Timeline:\n\n• Small Shed (upto 1000 sq ft): 7–10 days\n• Medium Shed (1000–3000 sq ft): 15–20 days\n• Large Warehouse: 25–35 days\n• MS Structure: 10–15 days\n\nOn-time delivery guaranteed! ✅'},
+  area:{p:['noida','greater noida','ncr','delhi','ghaziabad','faridabad','gurgaon','gurugram','where','kahan','area','location','near'],r:'📍 Service Area:\n\n✅ All of Noida\n✅ Greater Noida\n✅ Ghaziabad\n✅ Faridabad\n✅ Gurugram/Gurgaon\n✅ Delhi NCR\n\n📞 +91-8527977714'},
+  quality:{p:['quality','material','strong','durable','guarantee','warranty','brand','steel','sheet','isi','certified'],r:'✅ Quality Assurance:\n\n• ISI Certified steel & roofing sheets\n• Rust-proof treatment\n• 5+ year durability\n• 15+ years experience\n• 500+ satisfied customers\n\n📞 +91-8527977714'},
+  thanks:{p:['thanks','thank','shukriya','dhanyawad','ok','okay','acha','theek','great','nice','good','perfect','done'],r:'😊 You\'re welcome! Feel free to ask anything.\n\n📞 +91-8527977714\n💬 WhatsApp us anytime!'}
 };
 function toggleChat(){const b=document.getElementById('ai-chat-box');b.classList.toggle('open');if(b.classList.contains('open')&&document.getElementById('chat-msgs').children.length===0){addMsg('bot','👋 Hello! I\'m the Tin Shade Noida Assistant.\n\nAsk about:\n🏗️ Services & Pricing\n📞 Contact\n📅 Free Site Visit');}}
 function addMsg(t,txt){const m=document.getElementById('chat-msgs');const d=document.createElement('div');d.className='msg '+t;d.textContent=txt;m.appendChild(d);m.scrollTop=m.scrollHeight;}
 function getReply(i){const t=i.toLowerCase();for(const k in botR){if(botR[k].p.some(p=>t.includes(p)))return botR[k].r;}return '🤔 For best help:\n\n📞 +91-8527977714\n💬 WhatsApp us!';}
-function sendMsg(){const i=document.getElementById('chat-input');const t=i.value.trim();if(!t)return;i.value='';addMsg('user',t);const ty=addMsg('typing','Typing...');setTimeout(()=>{ty.remove();addMsg('bot',getReply(t));},650);}
+function sendMsg(){
+  const i=document.getElementById('chat-input');
+  const t=i.value.trim();
+  if(!t)return;
+  i.value='';
+  addMsg('user',t);
+  document.getElementById('chat-send').disabled=true;
+  const ty=addMsg('typing','Typing...');
+  setTimeout(()=>{
+    ty.remove();
+    addMsg('bot',getReply(t));
+    document.getElementById('chat-send').disabled=false;
+    document.getElementById('chat-input').focus();
+  },800);
+}
 
 // ── CONTACT FORM ──
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
