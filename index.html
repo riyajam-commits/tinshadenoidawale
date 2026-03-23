@@ -794,23 +794,60 @@ const botR={
   quality:{p:['quality','material','strong','durable','guarantee','warranty','brand','steel','sheet','isi','certified'],r:'✅ Quality Assurance:\n\n• ISI Certified steel & roofing sheets\n• Rust-proof treatment\n• 5+ year durability\n• 15+ years experience\n• 500+ satisfied customers\n\n📞 +91-8527977714'},
   thanks:{p:['thanks','thank','shukriya','dhanyawad','ok','okay','acha','theek','great','nice','good','perfect','done'],r:'😊 You\'re welcome! Feel free to ask anything.\n\n📞 +91-8527977714\n💬 WhatsApp us anytime!'}
 };
-function toggleChat(){const b=document.getElementById('ai-chat-box');b.classList.toggle('open');if(b.classList.contains('open')&&document.getElementById('chat-msgs').children.length===0){addMsg('bot','👋 Hello! I\'m the Tin Shade Noida Assistant.\n\nAsk about:\n🏗️ Services & Pricing\n📞 Contact\n📅 Free Site Visit');}}
-function addMsg(t,txt){const m=document.getElementById('chat-msgs');const d=document.createElement('div');d.className='msg '+t;d.textContent=txt;m.appendChild(d);m.scrollTop=m.scrollHeight;}
-function getReply(i){const t=i.toLowerCase();for(const k in botR){if(botR[k].p.some(p=>t.includes(p)))return botR[k].r;}return '🤔 For best help:\n\n📞 +91-8527977714\n💬 WhatsApp us!';}
+function toggleChat(){
+  var b=document.getElementById('ai-chat-box');
+  b.classList.toggle('open');
+  if(b.classList.contains('open') && document.getElementById('chat-msgs').children.length===0){
+    addMsg('bot','👋 Hello! Welcome to Tin Shade Noida.\n\nI can help you with:\n🏗️ Services & Pricing\n📞 Contact Details\n📅 Free Site Visit\n\nHow can I help?');
+  }
+}
+
+function addMsg(type, txt){
+  var msgs = document.getElementById('chat-msgs');
+  var div = document.createElement('div');
+  div.className = 'msg ' + type;
+  div.style.whiteSpace = 'pre-line';
+  div.textContent = txt;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+  return div;
+}
+
+function getReply(input){
+  var t = input.toLowerCase().trim();
+  for(var k in botR){
+    var patterns = botR[k].p;
+    for(var i=0; i<patterns.length; i++){
+      if(t.indexOf(patterns[i]) !== -1){
+        return botR[k].r;
+      }
+    }
+  }
+  return '🤔 I did not understand that.\n\nPlease contact us directly:\n📞 +91-8527977714\n💬 WhatsApp: +91-8527977714';
+}
+
 function sendMsg(){
-  const i=document.getElementById('chat-input');
-  const t=i.value.trim();
-  if(!t)return;
-  i.value='';
-  addMsg('user',t);
-  document.getElementById('chat-send').disabled=true;
-  const ty=addMsg('typing','Typing...');
-  setTimeout(()=>{
-    ty.remove();
-    addMsg('bot',getReply(t));
-    document.getElementById('chat-send').disabled=false;
-    document.getElementById('chat-input').focus();
-  },800);
+  var input = document.getElementById('chat-input');
+  var text = input.value.trim();
+  if(!text) return;
+  
+  input.value = '';
+  addMsg('user', text);
+  
+  var sendBtn = document.getElementById('chat-send');
+  sendBtn.disabled = true;
+  
+  var typingDiv = addMsg('typing', 'Typing...');
+  
+  setTimeout(function(){
+    if(typingDiv && typingDiv.parentNode){
+      typingDiv.parentNode.removeChild(typingDiv);
+    }
+    var reply = getReply(text);
+    addMsg('bot', reply);
+    sendBtn.disabled = false;
+    input.focus();
+  }, 700);
 }
 
 // ── CONTACT FORM ──
